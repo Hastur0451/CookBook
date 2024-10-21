@@ -25,3 +25,5 @@ D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\ne
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0\CookBook.genruntimeconfig.cache
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0\ref\CookBook.dll
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0\RecipeManager.GUI.RecipeSearchForm.resources
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0\CookBook.csproj.GenerateResource.cache
