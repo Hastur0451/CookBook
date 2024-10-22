@@ -1,17 +1,16 @@
 ﻿using System;
-using System.Windows.Forms;
-using RecipeManager.GUI;
+using System.Windows;
 
 namespace RecipeManager
 {
-    static class Program
+    public class Program
     {
         [STAThread]
-        static void Main()
+        public static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RecipeSearchForm());
+            var application = new Application();
+            application.StartupUri = new Uri("MainWindow.xaml", UriKind.Relative);
+            application.Run();
         }
     }
 }

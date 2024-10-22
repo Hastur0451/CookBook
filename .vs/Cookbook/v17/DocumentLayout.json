@@ -3,24 +3,32 @@
   "WorkspaceRootPath": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\uts file\\application development with .net\\assessment 2\\cookbook\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\uts file\\application development with .net\\assessment 2\\cookbook\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\uts file\\application development with .net\\assessment 2\\cookbook\\cookbook.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:cookbook.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\uts file\\application development with .net\\assessment 2\\cookbook\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\uts file\\application development with .net\\assessment 2\\cookbook\\recipemanager.businesslogic\\fatsecretapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:recipemanager.businesslogic\\fatsecretapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\uts file\\application development with .net\\assessment 2\\cookbook\\recipemanager.businesslogic\\themealdbclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:recipemanager.businesslogic\\themealdbclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\uts file\\application development with .net\\assessment 2\\cookbook\\recipemanager.businesslogic\\gui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:recipemanager.businesslogic\\gui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\uts file\\application development with .net\\assessment 2\\cookbook\\recipemanager.businesslogic\\recipelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:recipemanager.businesslogic\\recipelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\uts file\\application development with .net\\assessment 2\\cookbook\\recipemanager.businesslogic\\fatsecretapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:recipemanager.businesslogic\\fatsecretapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,8 +38,83 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAAcwFIAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T13:53:03.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-22T13:52:26.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CookBook.csproj",
+              "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\CookBook.csproj",
+              "RelativeDocumentMoniker": "CookBook.csproj",
+              "ToolTip": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\CookBook.csproj",
+              "RelativeToolTip": "CookBook.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-22T11:29:28.765Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Recipelogic.cs",
+              "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\RecipeManager.BusinessLogic\\Recipelogic.cs",
+              "RelativeDocumentMoniker": "RecipeManager.BusinessLogic\\Recipelogic.cs",
+              "ToolTip": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\RecipeManager.BusinessLogic\\Recipelogic.cs",
+              "RelativeToolTip": "RecipeManager.BusinessLogic\\Recipelogic.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAIwBIAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T07:19:40.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TheMealDBClient.cs",
+              "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\RecipeManager.BusinessLogic\\TheMealDBClient.cs",
+              "RelativeDocumentMoniker": "RecipeManager.BusinessLogic\\TheMealDBClient.cs",
+              "ToolTip": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\RecipeManager.BusinessLogic\\TheMealDBClient.cs",
+              "RelativeToolTip": "RecipeManager.BusinessLogic\\TheMealDBClient.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T11:32:54.962Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T06:50:33.056Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 4,
@@ -40,62 +123,9 @@
               "RelativeDocumentMoniker": "RecipeManager.BusinessLogic\\FatSecretApiClient.cs",
               "ToolTip": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\RecipeManager.BusinessLogic\\FatSecretApiClient.cs",
               "RelativeToolTip": "RecipeManager.BusinessLogic\\FatSecretApiClient.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAAAQwBMAAAAJAAAA",
+              "ViewState": "AQIAAFoAAAAAAAAAAAAYwGkAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T09:00:37.503Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Recipelogic.cs",
-              "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\RecipeManager.BusinessLogic\\Recipelogic.cs",
-              "RelativeDocumentMoniker": "RecipeManager.BusinessLogic\\Recipelogic.cs",
-              "ToolTip": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\RecipeManager.BusinessLogic\\Recipelogic.cs",
-              "RelativeToolTip": "RecipeManager.BusinessLogic\\Recipelogic.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T07:19:40.518Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GUI.cs",
-              "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\RecipeManager.BusinessLogic\\GUI.cs",
-              "RelativeDocumentMoniker": "RecipeManager.BusinessLogic\\GUI.cs",
-              "ToolTip": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\RecipeManager.BusinessLogic\\GUI.cs",
-              "RelativeToolTip": "RecipeManager.BusinessLogic\\GUI.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T12:35:45.052Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TheMealDBClient.cs",
-              "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\RecipeManager.BusinessLogic\\TheMealDBClient.cs",
-              "RelativeDocumentMoniker": "RecipeManager.BusinessLogic\\TheMealDBClient.cs",
-              "ToolTip": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\RecipeManager.BusinessLogic\\TheMealDBClient.cs",
-              "RelativeToolTip": "RecipeManager.BusinessLogic\\TheMealDBClient.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T11:32:54.962Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T06:50:33.056Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-21T09:00:37.503Z"
             }
           ]
         }
