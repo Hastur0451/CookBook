@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\UTS File\\Application Development with .NET\\Assessment 2\\CookBook\\CookBook.csproj": {}
+    "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\CookBook.csproj": {}
   },
   "projects": {
-    "D:\\UTS File\\Application Development with .NET\\Assessment 2\\CookBook\\CookBook.csproj": {
+    "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\CookBook.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\CookBook\\CookBook.csproj",
+        "projectUniqueName": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\CookBook.csproj",
         "projectName": "CookBook",
-        "projectPath": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\CookBook\\CookBook.csproj",
+        "projectPath": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\CookBook.csproj",
         "packagesPath": "C:\\Users\\Hastur\\.nuget\\packages\\",
-        "outputPath": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\CookBook\\obj\\",
+        "outputPath": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Hastur\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -44,6 +44,28 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "HtmlAgilityPack": {
+              "target": "Package",
+              "version": "[1.11.67, )"
+            },
+            "Microsoft.AspNetCore.Components.Forms": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.Extensions.Primitives": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -58,6 +80,9 @@
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
