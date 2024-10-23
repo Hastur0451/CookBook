@@ -1099,19 +1099,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\zy200\\.nuget\\packages\\": {}
+    "C:\\Users\\Hastur\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Application NET\\CookBook\\CookBook.csproj",
+      "projectUniqueName": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\CookBook.csproj",
       "projectName": "CookBook",
-      "projectPath": "D:\\Application NET\\CookBook\\CookBook.csproj",
-      "packagesPath": "C:\\Users\\zy200\\.nuget\\packages\\",
-      "outputPath": "D:\\Application NET\\CookBook\\obj\\",
+      "projectPath": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\CookBook.csproj",
+      "packagesPath": "C:\\Users\\Hastur\\.nuget\\packages\\",
+      "outputPath": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\zy200\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Hastur\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1194,7 +1194,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

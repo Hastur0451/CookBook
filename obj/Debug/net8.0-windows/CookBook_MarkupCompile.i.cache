@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Application NET\CookBook\obj\Debug\net8.0-windows\
-CookBook
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\
+RecipeManager
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 
-1-1693621270
+3590547337
 
-10-1510678369
-221-376836264
-RecipeManager.GUI\MainWindow.xaml;
+10-954827010
+221-319716500
+RecipeManager.GUI\Style\AppStyles.xaml;RecipeManager.GUI\Windows\App.xaml;RecipeManager.GUI\Windows\MainWindow.xaml;
 
 False
 

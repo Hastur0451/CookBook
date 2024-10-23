@@ -18,11 +18,13 @@ D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\bin\Debug\ne
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\bin\Debug\net8.0-windows\Microsoft.Xaml.Behaviors.dll
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\CookBook.csproj.AssemblyReference.cache
-D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Styles\WindowStyle.baml
-D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Themes\ThemeResources.baml
-D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Windows\MainWindow.baml
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Style\AppStyles.baml
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Windows\App.g.cs
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Windows\MainWindow.g.cs
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\CookBook_MarkupCompile.cache
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\CookBook_MarkupCompile.lref
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Windows\App.baml
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Windows\MainWindow.baml
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\CookBook.g.resources
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\CookBook.GeneratedMSBuildEditorConfig.editorconfig
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\CookBook.AssemblyInfoInputs.cache
@@ -35,41 +37,3 @@ D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\ne
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\CookBook.pdb
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\CookBook.genruntimeconfig.cache
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\ref\CookBook.dll
-D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Windows\App.baml
-D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Windows\App.g.cs
-D:\Application NET\CookBook\bin\Debug\net8.0-windows\CookBook.exe
-D:\Application NET\CookBook\bin\Debug\net8.0-windows\CookBook.deps.json
-D:\Application NET\CookBook\bin\Debug\net8.0-windows\CookBook.runtimeconfig.json
-D:\Application NET\CookBook\bin\Debug\net8.0-windows\CookBook.dll
-D:\Application NET\CookBook\bin\Debug\net8.0-windows\CookBook.pdb
-D:\Application NET\CookBook\bin\Debug\net8.0-windows\Dynamitey.dll
-D:\Application NET\CookBook\bin\Debug\net8.0-windows\ExtendedWPFConverters.dll
-D:\Application NET\CookBook\bin\Debug\net8.0-windows\ExtendedWPFVisualTreeHelper.dll
-D:\Application NET\CookBook\bin\Debug\net8.0-windows\HtmlAgilityPack.dll
-D:\Application NET\CookBook\bin\Debug\net8.0-windows\MaterialDesignColors.dll
-D:\Application NET\CookBook\bin\Debug\net8.0-windows\MaterialDesignThemes.Wpf.AddOns.dll
-D:\Application NET\CookBook\bin\Debug\net8.0-windows\MaterialDesignThemes.Wpf.dll
-D:\Application NET\CookBook\bin\Debug\net8.0-windows\Microsoft.WindowsAPICodePack.dll
-D:\Application NET\CookBook\bin\Debug\net8.0-windows\Microsoft.WindowsAPICodePack.Shell.dll
-D:\Application NET\CookBook\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
-D:\Application NET\CookBook\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-D:\Application NET\CookBook\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
-D:\Application NET\CookBook\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
-D:\Application NET\CookBook\bin\Debug\net8.0-windows\Microsoft.Xaml.Behaviors.dll
-D:\Application NET\CookBook\obj\Debug\net8.0-windows\CookBook.csproj.AssemblyReference.cache
-D:\Application NET\CookBook\obj\Debug\net8.0-windows\CookBook_MarkupCompile.cache
-D:\Application NET\CookBook\obj\Debug\net8.0-windows\CookBook.g.resources
-D:\Application NET\CookBook\obj\Debug\net8.0-windows\CookBook.GeneratedMSBuildEditorConfig.editorconfig
-D:\Application NET\CookBook\obj\Debug\net8.0-windows\CookBook.AssemblyInfoInputs.cache
-D:\Application NET\CookBook\obj\Debug\net8.0-windows\CookBook.AssemblyInfo.cs
-D:\Application NET\CookBook\obj\Debug\net8.0-windows\CookBook.csproj.CoreCompileInputs.cache
-D:\Application NET\CookBook\obj\Debug\net8.0-windows\CookBook.sourcelink.json
-D:\Application NET\CookBook\obj\Debug\net8.0-windows\CookBook.csproj.Up2Date
-D:\Application NET\CookBook\obj\Debug\net8.0-windows\CookBook.dll
-D:\Application NET\CookBook\obj\Debug\net8.0-windows\refint\CookBook.dll
-D:\Application NET\CookBook\obj\Debug\net8.0-windows\CookBook.pdb
-D:\Application NET\CookBook\obj\Debug\net8.0-windows\CookBook.genruntimeconfig.cache
-D:\Application NET\CookBook\obj\Debug\net8.0-windows\ref\CookBook.dll
-D:\Application NET\CookBook\obj\Debug\net8.0-windows\CookBook_MarkupCompile.lref
-D:\Application NET\CookBook\obj\Debug\net8.0-windows\RecipeManager.GUI\MainWindow.baml
-D:\Application NET\CookBook\obj\Debug\net8.0-windows\RecipeManager.GUI\MainWindow.g.cs
