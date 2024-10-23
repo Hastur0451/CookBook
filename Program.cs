@@ -9,7 +9,9 @@ namespace RecipeManager
         public static void Main()
         {
             var application = new Application();
-            application.StartupUri = new Uri("MainWindow.xaml", UriKind.Relative);
+            var mainWindow = new MainWindow();
+            application.MainWindow = mainWindow;
+            mainWindow.Show();
             application.Run();
         }
     }
