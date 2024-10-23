@@ -20,15 +20,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="RecipeManager.GUI\Windows\MainWindow.xaml.cs">
+    <Compile Update="RecipeManager.GUI\MainWindow.xaml.cs">
       <Generator>MSBuild:Compile</Generator>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <Page Update="RecipeManager.GUI\Windows\MainWindow.xaml">
+    <Page Update="RecipeManager.GUI\MainWindow.xaml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="RecipeManager.GUI\Windows\" />
   </ItemGroup>
 
 </Project>
