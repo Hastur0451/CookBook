@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using RecipeManager.BusinessLogic;
+using RecipeManager.DataBase;
+using CookBook.RecipeManager.GUI.Models;
 
 namespace CookBook.RecipeManager.GUI.Pages
 {
@@ -10,11 +13,16 @@ namespace CookBook.RecipeManager.GUI.Pages
     {
         private readonly RecipeLogic _recipeLogic;
         private List<RecipeSearchResult> _searchResults;
+        private readonly RecipeDatabase _recipeDatabase;
+        private List<CustomRecipe> _localRecipes;
 
         public SearchRecipePage(RecipeLogic recipeLogic)
         {
             InitializeComponent();
             _recipeLogic = recipeLogic;
+            _recipeDatabase = new RecipeDatabase("recipes.json");
+            _localRecipes = _recipeDatabase.LoadRecipes();
+            Console.WriteLine($"Loaded {_localRecipes.Count} local recipes.");
         }
 
         public async void SearchRecipes(string searchTerm)
@@ -30,6 +38,7 @@ namespace CookBook.RecipeManager.GUI.Pages
                 btnSearch.IsEnabled = false;
                 txtSearch.Text = searchTerm;
 
+                // Search online recipes
                 _searchResults = await _recipeLogic.SearchRecipes(searchTerm);
                 lstResults.ItemsSource = _searchResults;
 
@@ -46,11 +55,6 @@ namespace CookBook.RecipeManager.GUI.Pages
             {
                 btnSearch.IsEnabled = true;
             }
-        }
-
-        private void BtnSearch_Click(object sender, RoutedEventArgs e)
-        {
-            SearchRecipes(txtSearch.Text);
         }
 
         private async void LstResults_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -74,7 +78,7 @@ namespace CookBook.RecipeManager.GUI.Pages
 
                     instructionsExpander.IsExpanded = false;
 
-                    // 重置滚动位置
+                    // Reset scroll position
                     if (recipeDetailPanel.Parent is ScrollViewer scrollViewer)
                     {
                         scrollViewer.ScrollToTop();
@@ -89,6 +93,24 @@ namespace CookBook.RecipeManager.GUI.Pages
             {
                 recipeDetailPanel.Visibility = Visibility.Collapsed;
             }
+        }
+
+        private void DisplayLocalRecipeDetails(CustomRecipe recipe)
+        {
+            recipeDetailPanel.Visibility = Visibility.Visible;
+            recipeTitle.Text = recipe.Name;
+            ingredientsList.ItemsSource = recipe.Ingredients.Select(i => $"{i.Quantity} {i.Unit} {i.Name}");
+            recipeInstructions.Text = "Instructions not available for local recipes.";
+            instructionsExpander.IsExpanded = false;
+        }
+
+        private void DisplayOnlineRecipeDetails(Recipe recipe)
+        {
+            recipeDetailPanel.Visibility = Visibility.Visible;
+            recipeTitle.Text = recipe.Name;
+            ingredientsList.ItemsSource = recipe.Ingredients;
+            recipeInstructions.Text = string.IsNullOrWhiteSpace(recipe.Instructions) ? "No detailed instructions available." : recipe.Instructions;
+            instructionsExpander.IsExpanded = false;
         }
 
         private void BtnSaveList_Click(object sender, RoutedEventArgs e)

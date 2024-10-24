@@ -21,7 +21,7 @@ namespace CookBook.RecipeManager.GUI.Windows
                 string fatSecretConsumerSecret = "f72938e96e4e4ee7bf42873070c91110";
                 _recipeLogic = new RecipeLogic(fatSecretConsumerKey, fatSecretConsumerSecret);
 
-                // 初始化搜索页面
+                // Initialize search page
                 _searchPage = new SearchRecipePage(_recipeLogic);
                 searchFrame.Content = _searchPage;
             }

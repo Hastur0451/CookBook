@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 using CookBook.RecipeManager.GUI.Models;
+using RecipeManager.DataBase;
 
 namespace CookBook.RecipeManager.GUI.Pages
 {
@@ -9,16 +10,22 @@ namespace CookBook.RecipeManager.GUI.Pages
     {
         private List<CustomRecipe> _recipes = new List<CustomRecipe>();
         private CustomRecipe? _currentRecipe;
+        private readonly RecipeDatabase _recipeDatabase;
+        private readonly ShoppingListDatabase _shoppingListDatabase;
+        private List<string> _shoppingList;
 
         public CustomRecipePage()
         {
             InitializeComponent();
+            _recipeDatabase = new RecipeDatabase("recipes.json");
+            _shoppingListDatabase = new ShoppingListDatabase("shoppingList.json");
+            _shoppingList = _shoppingListDatabase.LoadShoppingList();
             LoadRecipes();
         }
 
         private void LoadRecipes()
         {
-            // TODO: Load recipes from storage
+            _recipes = _recipeDatabase.LoadRecipes();
             recipeList.ItemsSource = _recipes;
         }
 
@@ -66,7 +73,7 @@ namespace CookBook.RecipeManager.GUI.Pages
                     if (result == MessageBoxResult.Yes)
                     {
                         _recipes.Remove(recipe);
-                        // TODO: Save changes to storage
+                        _recipeDatabase.SaveRecipes(_recipes);
                         LoadRecipes();
                     }
                 }
@@ -77,7 +84,7 @@ namespace CookBook.RecipeManager.GUI.Pages
         {
             if (_currentRecipe != null)
             {
-                _currentRecipe.Ingredients.Add(string.Empty);
+                _currentRecipe.Ingredients.Add(new Ingredient());
                 RefreshIngredientsList();
             }
         }
@@ -86,7 +93,7 @@ namespace CookBook.RecipeManager.GUI.Pages
         {
             if (_currentRecipe != null && sender is Button button)
             {
-                var ingredient = button.DataContext as string;
+                var ingredient = button.DataContext as Ingredient;
                 if (ingredient != null)
                 {
                     _currentRecipe.Ingredients.Remove(ingredient);
@@ -112,7 +119,7 @@ namespace CookBook.RecipeManager.GUI.Pages
                 _recipes.Add(_currentRecipe);
             }
 
-            // TODO: Save changes to storage
+            _recipeDatabase.SaveRecipes(_recipes);
             LoadRecipes();
             ClearInputs();
             _currentRecipe = null;
@@ -122,8 +129,16 @@ namespace CookBook.RecipeManager.GUI.Pages
         {
             if (_currentRecipe != null)
             {
-                // TODO: Implement shopping list functionality
-                MessageBox.Show("Added to shopping list!");
+                foreach (var ingredient in _currentRecipe.Ingredients)
+                {
+                    var item = $"{ingredient.Quantity} {ingredient.Unit} {ingredient.Name}";
+                    if (!_shoppingList.Contains(item))
+                    {
+                        _shoppingList.Add(item);
+                    }
+                }
+                _shoppingListDatabase.SaveShoppingList(_shoppingList);
+                MessageBox.Show("Ingredients added to shopping list!");
             }
         }
 

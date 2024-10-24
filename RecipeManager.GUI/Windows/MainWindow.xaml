@@ -204,7 +204,7 @@
                                          FontSize="28"
                                          Foreground="White"
                                          HorizontalAlignment="Center"/>
-                                <TextBlock Text="Shopping Lists"
+                                <TextBlock Text="Shopping List feature coming soon!"
                                          Foreground="White"
                                          FontSize="16"
                                          TextWrapping="Wrap"
@@ -238,7 +238,7 @@
 
             <!-- Shopping List Page -->
             <Grid x:Name="shoppingListPage" Visibility="Collapsed">
-                <TextBlock Text="Shopping List feature coming soon!"
+                <TextBlock Text="Shopping list feature coming soon!"
                           FontSize="24"
                           Foreground="{StaticResource TextPrimaryBrush}"
                           HorizontalAlignment="Center"

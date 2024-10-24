@@ -136,10 +136,23 @@
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="*"/>
                                             <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
                                         </Grid.ColumnDefinitions>
-                                        <TextBox Text="{Binding}"
-                                                 FontSize="14"/>
-                                        <Button Grid.Column="1"
+                                        <TextBox Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}"
+                                                 FontSize="14"
+                                                 Margin="0,0,5,0"
+                                                 Grid.Column="0"/>
+                                        <TextBox Text="{Binding Quantity, UpdateSourceTrigger=PropertyChanged}"
+                                                 FontSize="14"
+                                                 Width="50"
+                                                 Margin="0,0,5,0"
+                                                 Grid.Column="1"/>
+                                        <TextBox Text="{Binding Unit, UpdateSourceTrigger=PropertyChanged}"
+                                                 FontSize="14"
+                                                 Width="50"
+                                                 Grid.Column="2"/>
+                                        <Button Grid.Column="3"
                                                 Content="&#xE74D;"
                                                 FontFamily="Segoe MDL2 Assets"
                                                 Click="RemoveIngredient_Click"

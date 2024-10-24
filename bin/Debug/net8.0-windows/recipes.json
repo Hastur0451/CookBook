@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "5ad1f164-847f-4235-9b47-92a007dc2da9",
+    "Name": "eggtomato",
+    "Ingredients": [
+      {
+        "Name": "egg",
+        "Quantity": 1,
+        "Unit": ""
+      },
+      {
+        "Name": "tomato",
+        "Quantity": 1,
+        "Unit": ""
+      }
+    ],
+    "CreatedDate": "2024-10-25T06:25:17.4380327+11:00",
+    "Notes": "",
+    "Nutrition": {
+      "Calories": 0,
+      "Protein": 0,
+      "Carbohydrates": 0,
+      "Fat": 0
+    }
+  }
+]
