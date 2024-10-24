@@ -127,6 +127,12 @@ namespace CookBook.RecipeManager.GUI.Windows
         {
             if (lstResults.SelectedIndex != -1 && _searchResults != null)
             {
+                // 重置右侧面板的滚动位置
+                if (recipeDetailPanel.Parent is ScrollViewer scrollViewer)
+                {
+                    scrollViewer.ScrollToTop();
+                }
+
                 var selectedResult = _searchResults[lstResults.SelectedIndex];
                 try
                 {
