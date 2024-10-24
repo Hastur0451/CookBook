@@ -32,13 +32,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Page Update="RecipeManager.GUI\Style\AppStyles.xaml">
-			<SubType>Designer</SubType>
-			<Generator>MSBuild:Compile</Generator>
-		</Page>
-	</ItemGroup>
-
-	<ItemGroup>
 		<Compile Update="RecipeManager.GUI\Windows\MainWindow.xaml.cs">
 			<SubType>Code</SubType>
 			<DependentUpon>MainWindow.xaml</DependentUpon>

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 
-3590547337
+31787626984
 
-8-475017752
+111105077049
 221-319716500
-RecipeManager.GUI\Style\AppStyles.xaml;RecipeManager.GUI\Windows\App.xaml;RecipeManager.GUI\Windows\MainWindow.xaml;
+RecipeManager.GUI\Pages\CustomRecipePage.xaml;RecipeManager.GUI\Windows\App.xaml;RecipeManager.GUI\Windows\MainWindow.xaml;
 
 False
 

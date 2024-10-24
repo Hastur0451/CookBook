@@ -1,40 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using CookBook.RecipeManager.GUI.Pages;
+using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using RecipeManager.BusinessLogic;
 
-namespace RecipeManager
+namespace CookBook.RecipeManager.GUI.Windows
 {
     public partial class MainWindow : Window
     {
-        private readonly RecipeLogic _recipeLogic;
-        private List<RecipeSearchResult> _searchResults;
-
         public MainWindow()
         {
-            InitializeComponent();
-            string fatSecretConsumerKey = "614e76da537c4a61a07a73763b373951";
-            string fatSecretConsumerSecret = "f72938e96e4e4ee7bf42873070c91110";
-            _recipeLogic = new RecipeLogic(fatSecretConsumerKey, fatSecretConsumerSecret);
-
-            // Initialize page state
-            welcomePage.Visibility = Visibility.Visible;
-            recipeManagementPage.Visibility = Visibility.Collapsed;
-            recipeDetailPanel.Visibility = Visibility.Collapsed;
-            navigationList.SelectedIndex = -1;
+            try
+            {
+                InitializeComponent();
+                // 可以在这里添加其他初始化代码
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error during initialization: {ex.Message}");
+            }
         }
-
 
         private void NavigationList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (navigationList.SelectedItem == null) return;
 
-            // Hide all pages first
+            // Hide all pages
             welcomePage.Visibility = Visibility.Collapsed;
             recipeManagementPage.Visibility = Visibility.Collapsed;
-            recipeDetailPanel.Visibility = Visibility.Collapsed;
+            customRecipePage.Visibility = Visibility.Collapsed;
+            if (recipeDetailPanel != null)
+            {
+                recipeDetailPanel.Visibility = Visibility.Collapsed;
+            }
 
             var selectedItem = ((ListBoxItem)navigationList.SelectedItem).Name;
             switch (selectedItem)
@@ -43,15 +41,12 @@ namespace RecipeManager
                     recipeManagementPage.Visibility = Visibility.Visible;
                     break;
                 case "customRecipeItem":
-                    // TODO: Implement custom recipe page
-                    MessageBox.Show("Custom recipe feature coming soon!");
+                    customRecipePage.Visibility = Visibility.Visible;
                     break;
                 case "favoriteRecipeItem":
-                    // TODO: Implement favorite recipes page
                     MessageBox.Show("Favorite recipes feature coming soon!");
                     break;
                 case "shoppingListItem":
-                    // TODO: Implement shopping list page
                     MessageBox.Show("Shopping list feature coming soon!");
                     break;
             }
@@ -59,42 +54,23 @@ namespace RecipeManager
 
         private void WelcomeSearchButton_Click(object sender, RoutedEventArgs e)
         {
-            PerformSearchAndSwitchPage(welcomeSearchBox.Text);
+            SearchRecipes(welcomeSearchBox.Text);
         }
 
         private void WelcomeSearchBox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
             {
-                PerformSearchAndSwitchPage(welcomeSearchBox.Text);
+                SearchRecipes(welcomeSearchBox.Text);
             }
-        }
-
-        private void PerformSearchAndSwitchPage(string searchTerm)
-        {
-            if (string.IsNullOrWhiteSpace(searchTerm))
-            {
-                MessageBox.Show("Please enter a search term");
-                return;
-            }
-
-            // Switch to search page
-            navigationList.SelectedItem = searchRecipeItem;
-            recipeManagementPage.Visibility = Visibility.Visible;
-
-            // Copy search term to search page's textbox
-            txtSearch.Text = searchTerm;
-
-            // Perform search
-            PerformSearch(searchTerm);
         }
 
         private void btnSearch_Click(object sender, RoutedEventArgs e)
         {
-            PerformSearch(txtSearch.Text);
+            SearchRecipes(txtSearch.Text);
         }
 
-        private async void PerformSearch(string searchTerm)
+        private void SearchRecipes(string searchTerm)
         {
             if (string.IsNullOrWhiteSpace(searchTerm))
             {
@@ -102,65 +78,22 @@ namespace RecipeManager
                 return;
             }
 
-            try
-            {
-                btnSearch.IsEnabled = false;
-                welcomeSearchButton.IsEnabled = false;
+            // TODO: Implement search functionality
+            MessageBox.Show($"Searching for: {searchTerm}");
 
-                _searchResults = await _recipeLogic.SearchRecipes(searchTerm);
-                lstResults.Items.Clear();
-
-                foreach (var result in _searchResults)
-                {
-                    lstResults.Items.Add(result.Name);
-                }
-
-                if (_searchResults.Count == 0)
-                {
-                    MessageBox.Show("No matching recipes found");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error occurred during search: {ex.Message}");
-            }
-            finally
-            {
-                btnSearch.IsEnabled = true;
-                welcomeSearchButton.IsEnabled = true;
-            }
+            // Switch to recipe management page
+            navigationList.SelectedItem = searchRecipeItem;
+            recipeManagementPage.Visibility = Visibility.Visible;
+            txtSearch.Text = searchTerm;
         }
 
-        private async void lstResults_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void lstResults_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (lstResults.SelectedIndex != -1 && _searchResults != null)
+            if (lstResults.SelectedIndex != -1)
             {
-                var selectedResult = _searchResults[lstResults.SelectedIndex];
-                try
-                {
-                    var recipe = await _recipeLogic.GetRecipeDetails(selectedResult.Id);
-
-                    recipeDetailPanel.Visibility = Visibility.Visible;
-                    recipeTitle.Text = recipe.Name;
-
-                    ingredientsList.Items.Clear();
-                    foreach (var (measure, ingredient) in _recipeLogic.GetFormattedIngredients(recipe))
-                    {
-                        ingredientsList.Items.Add($"{measure} {ingredient}");
-                    }
-
-                    recipeInstructions.Text = recipe.Instructions;
-                    if (string.IsNullOrWhiteSpace(recipe.Instructions))
-                    {
-                        recipeInstructions.Text = "No detailed instructions available.";
-                    }
-
-                    instructionsExpander.IsExpanded = false;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error occurred while getting recipe details: {ex.Message}");
-                }
+                // Show recipe details
+                recipeDetailPanel.Visibility = Visibility.Visible;
+                // TODO: Load recipe details
             }
             else
             {
