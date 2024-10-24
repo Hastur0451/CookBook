@@ -20,24 +20,24 @@
             <StackPanel>
                 <!-- App Title -->
                 <TextBlock Text="Recipe Generator"
-                 Style="{StaticResource NavigationTextBlockStyle}"
-                 FontSize="24"
-                 FontWeight="Bold"
-                 HorizontalAlignment="Center"
-                 TextAlignment="Center"
-                 Margin="10,30,10,0"/>
+                         Style="{StaticResource NavigationTextBlockStyle}"
+                         FontSize="24"
+                         FontWeight="Bold"
+                         HorizontalAlignment="Center"
+                         TextAlignment="Center"
+                         Margin="10,30,10,0"/>
 
                 <TextBlock Text="Group 12"
-                 Style="{StaticResource NavigationTextBlockStyle}"
-                 FontSize="16"
-                 HorizontalAlignment="Center"
-                 Margin="0,10,0,30"/>
+                         Style="{StaticResource NavigationTextBlockStyle}"
+                         FontSize="16"
+                         HorizontalAlignment="Center"
+                         Margin="0,10,0,30"/>
 
                 <!-- Navigation Buttons -->
                 <ListBox x:Name="navigationList" 
-                Style="{StaticResource NavigationListBoxStyle}"
-                Margin="10,0"
-                SelectionChanged="NavigationList_SelectionChanged">
+                        Style="{StaticResource NavigationListBoxStyle}"
+                        Margin="10,0"
+                        SelectionChanged="NavigationList_SelectionChanged">
                     <ListBox.ItemContainerStyle>
                         <StaticResource ResourceKey="NavigationListBoxItemStyle"/>
                     </ListBox.ItemContainerStyle>
@@ -45,49 +45,50 @@
                     <ListBoxItem x:Name="searchRecipeItem">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="&#xE721;" 
-                             FontFamily="Segoe MDL2 Assets" 
-                             Style="{StaticResource NavigationTextBlockStyle}"
-                             Margin="0,0,10,0"/>
+                                     FontFamily="Segoe MDL2 Assets" 
+                                     Style="{StaticResource NavigationTextBlockStyle}"
+                                     Margin="0,0,10,0"/>
                             <TextBlock Text="Search Recipes"
-                             Style="{StaticResource NavigationTextBlockStyle}"/>
+                                     Style="{StaticResource NavigationTextBlockStyle}"/>
                         </StackPanel>
                     </ListBoxItem>
 
                     <ListBoxItem x:Name="customRecipeItem">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="&#xE710;" 
-                             FontFamily="Segoe MDL2 Assets"
-                             Style="{StaticResource NavigationTextBlockStyle}"
-                             Margin="0,0,10,0"/>
+                                     FontFamily="Segoe MDL2 Assets"
+                                     Style="{StaticResource NavigationTextBlockStyle}"
+                                     Margin="0,0,10,0"/>
                             <TextBlock Text="Custom Recipes"
-                             Style="{StaticResource NavigationTextBlockStyle}"/>
+                                     Style="{StaticResource NavigationTextBlockStyle}"/>
                         </StackPanel>
                     </ListBoxItem>
 
                     <ListBoxItem x:Name="favoriteRecipeItem">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="&#xE734;"
-                             FontFamily="Segoe MDL2 Assets"
-                             Style="{StaticResource NavigationTextBlockStyle}"
-                             Margin="0,0,10,0"/>
+                                     FontFamily="Segoe MDL2 Assets"
+                                     Style="{StaticResource NavigationTextBlockStyle}"
+                                     Margin="0,0,10,0"/>
                             <TextBlock Text="Favorite Recipes"
-                             Style="{StaticResource NavigationTextBlockStyle}"/>
+                                     Style="{StaticResource NavigationTextBlockStyle}"/>
                         </StackPanel>
                     </ListBoxItem>
 
                     <ListBoxItem x:Name="shoppingListItem">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="&#xE7BF;"
-                             FontFamily="Segoe MDL2 Assets"
-                             Style="{StaticResource NavigationTextBlockStyle}"
-                             Margin="0,0,10,0"/>
+                                     FontFamily="Segoe MDL2 Assets"
+                                     Style="{StaticResource NavigationTextBlockStyle}"
+                                     Margin="0,0,10,0"/>
                             <TextBlock Text="Shopping List"
-                             Style="{StaticResource NavigationTextBlockStyle}"/>
+                                     Style="{StaticResource NavigationTextBlockStyle}"/>
                         </StackPanel>
                     </ListBoxItem>
                 </ListBox>
             </StackPanel>
         </Grid>
+
         <!-- Main Content Area -->
         <Grid Grid.Column="1" Margin="20">
             <!-- Welcome Page -->
@@ -218,122 +219,8 @@
 
             <!-- Recipe Management Page -->
             <Grid x:Name="recipeManagementPage" Visibility="Collapsed">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-
-                <!-- Search Area -->
-                <DockPanel Grid.Row="0" LastChildFill="False" Margin="0,0,0,10">
-                    <TextBox x:Name="txtSearch" 
-            Width="300"
-            DockPanel.Dock="Left"
-            FontSize="14"
-            Background="White"
-            Foreground="{StaticResource TextPrimaryBrush}"
-            BorderBrush="{StaticResource BorderBrush}"
-            Padding="15,10"
-            Margin="0,0,10,0"/>
-
-                    <Button x:Name="btnSearch" 
-            DockPanel.Dock="Left"
-            Content="Search"
-            Width="80"
-            Click="btnSearch_Click"/>
-                </DockPanel>
-
-                <!-- Results Display Area -->
-                <Grid Grid.Row="1" Margin="0,10">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="300"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-
-                    <!-- Recipe List -->
-                    <Border Grid.Column="0" 
-                            BorderThickness="1" 
-                            BorderBrush="{StaticResource BorderBrush}" 
-                            CornerRadius="4" 
-                            Margin="0,0,10,0"
-                            Background="White">
-                        <ListBox x:Name="lstResults" 
-                            Style="{StaticResource SearchResultsListBoxStyle}"
-                            SelectionChanged="lstResults_SelectionChanged">
-                            <ListBox.ItemContainerStyle>
-                                <StaticResource ResourceKey="SearchResultsListBoxItemStyle"/>
-                            </ListBox.ItemContainerStyle>
-                            <ListBox.ItemTemplate>
-                                <DataTemplate>
-                                    <TextBlock Text="{Binding}" 
-                      Padding="8,4" 
-                      TextWrapping="Wrap"/>
-                                </DataTemplate>
-                            </ListBox.ItemTemplate>
-                        </ListBox>
-                    </Border>
-
-                    <!-- Recipe Details Panel -->
-                    <ScrollViewer Grid.Column="1">
-                        <Border Grid.Column="1" 
-            x:Name="recipeDetailPanel"
-            BorderThickness="1" 
-            BorderBrush="{StaticResource BorderBrush}" 
-            CornerRadius="4"
-            Background="White"
-            Visibility="Collapsed">
-                            <DockPanel Margin="20">
-                                <!-- Title -->
-                                <TextBlock x:Name="recipeTitle" 
-                      DockPanel.Dock="Top"
-                      FontSize="28"
-                      FontWeight="Bold"
-                      Foreground="{StaticResource TextPrimaryBrush}"
-                      Margin="0,0,0,20"/>
-
-                                <!-- Save Button -->
-                                <Button x:Name="btnSaveList"
-                    DockPanel.Dock="Bottom"
-                    Content="Save Shopping List"
-                    Click="BtnSaveList_Click"
-                    HorizontalAlignment="Right"
-                    Margin="0,10,0,0"/>
-
-                                <!-- Content Area -->
-                                <StackPanel>
-                                    <!-- Ingredients List -->
-                                    <TextBlock Text="Ingredients"
-                          FontSize="20"
-                          FontWeight="Bold"
-                          Foreground="{StaticResource TextPrimaryBrush}"
-                          Margin="0,0,0,10"/>
-
-                                    <ItemsControl x:Name="ingredientsList" 
-                            Margin="0,0,0,20">
-                                        <ItemsControl.ItemTemplate>
-                                            <DataTemplate>
-                                                <CheckBox Content="{Binding}"
-                                    Foreground="{StaticResource TextPrimaryBrush}"
-                                    Margin="0,4"/>
-                                            </DataTemplate>
-                                        </ItemsControl.ItemTemplate>
-                                    </ItemsControl>
-
-                                    <!-- Cooking Instructions -->
-                                    <Expander Header="Instructions"
-                         x:Name="instructionsExpander"
-                         Margin="0,0,0,20">
-                                        <TextBlock x:Name="recipeInstructions"
-                              TextWrapping="Wrap"
-                              FontSize="14"
-                              Foreground="{StaticResource TextPrimaryBrush}"
-                              LineHeight="24"
-                              Margin="0,10,0,0"/>
-                                    </Expander>
-                                </StackPanel>
-                            </DockPanel>
-                        </Border>
-                    </ScrollViewer>
-                </Grid>
+                <Frame x:Name="searchFrame" 
+                       NavigationUIVisibility="Hidden"/>
             </Grid>
 
             <!-- Custom Recipe Page -->
@@ -352,12 +239,11 @@
             <!-- Shopping List Page -->
             <Grid x:Name="shoppingListPage" Visibility="Collapsed">
                 <TextBlock Text="Shopping List feature coming soon!"
-              FontSize="24"
-              Foreground="{StaticResource TextPrimaryBrush}"
-              HorizontalAlignment="Center"
-              VerticalAlignment="Center"/>
+                          FontSize="24"
+                          Foreground="{StaticResource TextPrimaryBrush}"
+                          HorizontalAlignment="Center"
+                          VerticalAlignment="Center"/>
             </Grid>
-
         </Grid>
     </Grid>
 </Window>

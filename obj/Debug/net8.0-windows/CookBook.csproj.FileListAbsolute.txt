@@ -21,12 +21,14 @@ D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\bin\Debug\ne
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\CookBook.csproj.AssemblyReference.cache
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Windows\App.baml
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Pages\CustomRecipePage.g.cs
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Pages\SearchRecipePage.g.cs
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Windows\App.g.cs
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Windows\MainWindow.g.cs
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\CookBook_MarkupCompile.cache
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\CookBook_MarkupCompile.lref
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Pages\CustomRecipePage.baml
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Pages\SearchRecipePage.baml
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Windows\MainWindow.baml
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\CookBook.g.resources
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\CookBook.GeneratedMSBuildEditorConfig.editorconfig

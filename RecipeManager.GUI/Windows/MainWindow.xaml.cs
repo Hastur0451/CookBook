@@ -1,17 +1,16 @@
 ﻿using CookBook.RecipeManager.GUI.Pages;
 using System;
-using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using RecipeManager.BusinessLogic;  // 添加这个引用
+using RecipeManager.BusinessLogic;
 
 namespace CookBook.RecipeManager.GUI.Windows
 {
     public partial class MainWindow : Window
     {
         private readonly RecipeLogic _recipeLogic;
-        private List<RecipeSearchResult> _searchResults;
+        private SearchRecipePage _searchPage;
 
         public MainWindow()
         {
@@ -21,6 +20,10 @@ namespace CookBook.RecipeManager.GUI.Windows
                 string fatSecretConsumerKey = "614e76da537c4a61a07a73763b373951";
                 string fatSecretConsumerSecret = "f72938e96e4e4ee7bf42873070c91110";
                 _recipeLogic = new RecipeLogic(fatSecretConsumerKey, fatSecretConsumerSecret);
+
+                // 初始化搜索页面
+                _searchPage = new SearchRecipePage(_recipeLogic);
+                searchFrame.Content = _searchPage;
             }
             catch (Exception ex)
             {
@@ -36,10 +39,8 @@ namespace CookBook.RecipeManager.GUI.Windows
             welcomePage.Visibility = Visibility.Collapsed;
             recipeManagementPage.Visibility = Visibility.Collapsed;
             customRecipePage.Visibility = Visibility.Collapsed;
-            if (recipeDetailPanel != null)
-            {
-                recipeDetailPanel.Visibility = Visibility.Collapsed;
-            }
+            favoriteRecipePage.Visibility = Visibility.Collapsed;
+            shoppingListPage.Visibility = Visibility.Collapsed;
 
             var selectedItem = ((ListBoxItem)navigationList.SelectedItem).Name;
             switch (selectedItem)
@@ -51,124 +52,27 @@ namespace CookBook.RecipeManager.GUI.Windows
                     customRecipePage.Visibility = Visibility.Visible;
                     break;
                 case "favoriteRecipeItem":
-                    MessageBox.Show("Favorite recipes feature coming soon!");
-                    welcomePage.Visibility = Visibility.Visible;
-                    navigationList.SelectedIndex = -1;
+                    favoriteRecipePage.Visibility = Visibility.Visible;
                     break;
                 case "shoppingListItem":
-                    MessageBox.Show("Shopping list feature coming soon!");
-                    welcomePage.Visibility = Visibility.Visible;
-                    navigationList.SelectedIndex = -1;
+                    shoppingListPage.Visibility = Visibility.Visible;
                     break;
             }
         }
 
         private void WelcomeSearchButton_Click(object sender, RoutedEventArgs e)
         {
-            SearchRecipes(welcomeSearchBox.Text);
+            string searchTerm = welcomeSearchBox.Text;
+            navigationList.SelectedItem = searchRecipeItem;
+            _searchPage.SearchRecipes(searchTerm);
         }
 
         private void WelcomeSearchBox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
             {
-                SearchRecipes(welcomeSearchBox.Text);
+                WelcomeSearchButton_Click(sender, e);
             }
-        }
-
-        private void btnSearch_Click(object sender, RoutedEventArgs e)
-        {
-            SearchRecipes(txtSearch.Text);
-        }
-
-        private async void SearchRecipes(string searchTerm)
-        {
-            if (string.IsNullOrWhiteSpace(searchTerm))
-            {
-                MessageBox.Show("Please enter a search term");
-                return;
-            }
-
-            try
-            {
-                btnSearch.IsEnabled = false;
-                welcomeSearchButton.IsEnabled = false;
-
-                _searchResults = await _recipeLogic.SearchRecipes(searchTerm);
-                lstResults.Items.Clear();
-
-                foreach (var result in _searchResults)
-                {
-                    lstResults.Items.Add(result.Name);
-                }
-
-                if (_searchResults.Count == 0)
-                {
-                    MessageBox.Show("No matching recipes found");
-                }
-
-                // Switch to recipe management page
-                navigationList.SelectedItem = searchRecipeItem;
-                recipeManagementPage.Visibility = Visibility.Visible;
-                txtSearch.Text = searchTerm;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error occurred during search: {ex.Message}");
-            }
-            finally
-            {
-                btnSearch.IsEnabled = true;
-                welcomeSearchButton.IsEnabled = true;
-            }
-        }
-
-        private async void lstResults_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (lstResults.SelectedIndex != -1 && _searchResults != null)
-            {
-                // 重置右侧面板的滚动位置
-                if (recipeDetailPanel.Parent is ScrollViewer scrollViewer)
-                {
-                    scrollViewer.ScrollToTop();
-                }
-
-                var selectedResult = _searchResults[lstResults.SelectedIndex];
-                try
-                {
-                    var recipe = await _recipeLogic.GetRecipeDetails(selectedResult.Id);
-
-                    recipeDetailPanel.Visibility = Visibility.Visible;
-                    recipeTitle.Text = recipe.Name;
-
-                    ingredientsList.Items.Clear();
-                    foreach (var ingredient in recipe.Ingredients)
-                    {
-                        ingredientsList.Items.Add(ingredient);
-                    }
-
-                    recipeInstructions.Text = recipe.Instructions;
-                    if (string.IsNullOrWhiteSpace(recipe.Instructions))
-                    {
-                        recipeInstructions.Text = "No detailed instructions available.";
-                    }
-
-                    instructionsExpander.IsExpanded = false;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error occurred while getting recipe details: {ex.Message}");
-                }
-            }
-            else
-            {
-                recipeDetailPanel.Visibility = Visibility.Collapsed;
-            }
-        }
-
-        private void BtnSaveList_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Shopping list save feature will be available in a future update.", "Notice");
         }
     }
 }
