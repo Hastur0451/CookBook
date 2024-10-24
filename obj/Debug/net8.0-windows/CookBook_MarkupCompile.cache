@@ -1,0 +1,20 @@
+﻿CookBook
+
+
+winexe
+C#
+.cs
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\
+RecipeManager
+none
+false
+TRACE;DEBUG;NET;NET8_0;NETCOREAPP
+
+4-1797473910
+
+12-1101357705
+221-319716500
+RecipeManager.GUI\Pages\CustomRecipePage.xaml;RecipeManager.GUI\Pages\SearchRecipePage.xaml;RecipeManager.GUI\Windows\App.xaml;RecipeManager.GUI\Windows\MainWindow.xaml;
+
+False
+

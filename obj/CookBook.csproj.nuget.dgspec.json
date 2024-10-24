@@ -18,15 +18,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net8.0-windows"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
             "projectReferences": {}
           }
         },
@@ -42,16 +42,28 @@
         }
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
           "dependencies": {
             "HtmlAgilityPack": {
               "target": "Package",
               "version": "[1.11.67, )"
             },
-            "Microsoft.AspNetCore.Components.Forms": {
+            "MaterialDesignColors": {
               "target": "Package",
-              "version": "[8.0.10, )"
+              "version": "[3.1.0, )"
+            },
+            "MaterialDesignInXamlToolkitAddOns": {
+              "target": "Package",
+              "version": "[0.0.6, )"
+            },
+            "MaterialDesignThemes": {
+              "target": "Package",
+              "version": "[5.1.0, )"
+            },
+            "Microsoft-WindowsAPICodePack-Shell": {
+              "target": "Package",
+              "version": "[1.1.5, )"
             },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
@@ -81,7 +93,7 @@
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             },
-            "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "Microsoft.WindowsDesktop.App.WPF": {
               "privateAssets": "none"
             }
           },
