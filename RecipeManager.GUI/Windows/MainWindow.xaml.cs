@@ -12,6 +12,7 @@ namespace CookBook.RecipeManager.GUI.Windows
         private readonly RecipeLogic _recipeLogic;
         private SearchRecipePage _searchPage;
         private FavoriteRecipePage _favoritePage;
+        private ShoppingListPage _shoppingPage;
         public MainWindow()
         {
             try
@@ -27,6 +28,9 @@ namespace CookBook.RecipeManager.GUI.Windows
 
                 _favoritePage = new FavoriteRecipePage(_recipeLogic);
                 favoriteFrame.Content = _favoritePage;
+
+                _shoppingPage = new ShoppingListPage();
+                shoppingFrame.Content = _shoppingPage;
             }
             catch (Exception ex)
             {

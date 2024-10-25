@@ -46,3 +46,5 @@ D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\ne
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Pages\FavoriteButton.baml
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Pages\FavoriteRecipePage.g.cs
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Pages\FavoriteRecipePage.baml
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Pages\ShoppingListPage.g.cs
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Pages\ShoppingListPage.baml

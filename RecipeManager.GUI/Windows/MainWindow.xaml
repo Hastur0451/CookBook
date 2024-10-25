@@ -235,11 +235,8 @@
 
             <!-- Shopping List Page -->
             <Grid x:Name="shoppingListPage" Visibility="Collapsed">
-                <TextBlock Text="Shopping List feature coming soon!"
-                          FontSize="24"
-                          Foreground="{StaticResource TextPrimaryBrush}"
-                          HorizontalAlignment="Center"
-                          VerticalAlignment="Center"/>
+                <Frame x:Name="shoppingFrame" 
+           NavigationUIVisibility="Hidden"/>
             </Grid>
         </Grid>
     </Grid>
