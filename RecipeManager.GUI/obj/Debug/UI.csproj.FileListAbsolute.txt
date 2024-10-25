@@ -1,0 +1,5 @@
+D:\C#Assessment4\CookBook\RecipeManager.GUI\obj\Debug\UI.csproj.AssemblyReference.cache
+D:\C#Assessment4\CookBook\RecipeManager.GUI\obj\Debug\UI.Form1.resources
+D:\C#Assessment4\CookBook\RecipeManager.GUI\obj\Debug\UI.Properties.Resources.resources
+D:\C#Assessment4\CookBook\RecipeManager.GUI\obj\Debug\UI.csproj.GenerateResource.cache
+D:\C#Assessment4\CookBook\RecipeManager.GUI\obj\Debug\UI.csproj.CoreCompileInputs.cache
