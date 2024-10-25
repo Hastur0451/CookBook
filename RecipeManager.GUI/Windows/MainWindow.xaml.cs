@@ -1,9 +1,13 @@
-﻿using CookBook.RecipeManager.GUI.Pages;
-using System;
+﻿using System;
+using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using RecipeManager.BusinessLogic;
+using CookBook.RecipeManager.GUI.Pages;
+using System.Linq;
+using CookBook.RecipeManager.GUI.Models;
+using RecipeManager.DataBase;
 
 namespace CookBook.RecipeManager.GUI.Windows
 {
@@ -13,6 +17,9 @@ namespace CookBook.RecipeManager.GUI.Windows
         private SearchRecipePage _searchPage;
         private FavoriteRecipePage _favoritePage;
         private ShoppingListPage _shoppingPage;
+        private ObservableCollection<RecipeItem> _addedRecipes;
+        private readonly ShoppingListDatabase _shoppingListDatabase;
+
         public MainWindow()
         {
             try
@@ -22,7 +29,14 @@ namespace CookBook.RecipeManager.GUI.Windows
                 string fatSecretConsumerSecret = "f72938e96e4e4ee7bf42873070c91110";
                 _recipeLogic = new RecipeLogic(fatSecretConsumerKey, fatSecretConsumerSecret);
 
-                // 初始化搜索页面
+                // 初始化购物清单数据库
+                _shoppingListDatabase = new ShoppingListDatabase("shoppingList.json");
+
+                // 初始化食谱列表
+                _addedRecipes = new ObservableCollection<RecipeItem>();
+                addedRecipesList.ItemsSource = _addedRecipes;
+
+                // 初始化各页面
                 _searchPage = new SearchRecipePage(_recipeLogic);
                 searchFrame.Content = _searchPage;
 
@@ -31,11 +45,44 @@ namespace CookBook.RecipeManager.GUI.Windows
 
                 _shoppingPage = new ShoppingListPage();
                 shoppingFrame.Content = _shoppingPage;
+
+                // 加载购物清单中的食材
+                LoadShoppingListItems();
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error during initialization: {ex.Message}");
             }
+        }
+
+        private void LoadShoppingListItems()
+        {
+            try
+            {
+                _addedRecipes.Clear(); // 清除现有项目
+                var shoppingItems = _shoppingListDatabase.LoadShoppingList();
+
+                // 按名称分组并只添加一次
+                var groupedItems = shoppingItems
+                    .Select(item => item.Name)
+                    .Distinct()
+                    .OrderBy(name => name);
+
+                foreach (var itemName in groupedItems)
+                {
+                    _addedRecipes.Add(new RecipeItem { Name = itemName });
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading shopping list items: {ex.Message}");
+            }
+        }
+
+        // 用于绑定的食谱项类
+        public class RecipeItem
+        {
+            public string Name { get; set; }
         }
 
         private void NavigationList_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -60,10 +107,11 @@ namespace CookBook.RecipeManager.GUI.Windows
                     break;
                 case "favoriteRecipeItem":
                     favoriteRecipePage.Visibility = Visibility.Visible;
-                    _favoritePage.LoadFavoriteRecipes(); // Refresh favorite recipes
+                    _favoritePage.LoadFavoriteRecipes();
                     break;
                 case "shoppingListItem":
                     shoppingListPage.Visibility = Visibility.Visible;
+                    LoadShoppingListItems(); // 刷新购物清单显示
                     break;
             }
         }

@@ -17,15 +17,22 @@
         <!-- Header Area -->
         <DockPanel Grid.Row="0" Margin="0,0,0,20">
             <TextBlock Text="Shopping List"
-                      FontSize="24"
-                      FontWeight="Bold"
-                      Foreground="{StaticResource TextPrimaryBrush}"/>
+              FontSize="24"
+              FontWeight="Bold"
+              Foreground="{StaticResource TextPrimaryBrush}"/>
 
-            <!-- Add New Item Button -->
-            <Button Content="Add Item"
-                    DockPanel.Dock="Right"
-                    Width="100"
-                    Click="BtnAddItem_Click"/>
+            <!-- Add New Item Button and Merge Button -->
+            <StackPanel DockPanel.Dock="Right" 
+                Orientation="Horizontal">
+                <Button Content="Merge Similar"
+                Width="100"
+                Margin="0,0,10,0"
+                Click="BtnMergeItems_Click"/>
+
+                <Button Content="Add Item"
+                Width="100"
+                Click="BtnAddItem_Click"/>
+            </StackPanel>
         </DockPanel>
 
         <!-- Shopping List Area -->

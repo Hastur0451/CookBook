@@ -17,7 +17,12 @@
 
         <!-- Left Navigation Bar -->
         <Grid Grid.Column="0" Background="{StaticResource PrimaryBrush}">
-            <StackPanel>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0">
                 <!-- App Title -->
                 <TextBlock Text="Recipe Generator"
                          Style="{StaticResource NavigationTextBlockStyle}"
@@ -86,6 +91,32 @@
                         </StackPanel>
                     </ListBoxItem>
                 </ListBox>
+
+                <!-- Shopping List Items Section -->
+                <TextBlock Text="Shopping List Items"
+                     Style="{StaticResource NavigationTextBlockStyle}"
+                     FontSize="16"
+                     FontWeight="Bold"
+                     Margin="10,20,10,10"/>     
+
+                <Border Background="#30FFFFFF" 
+                        CornerRadius="5" 
+                        Margin="10,0,10,10">
+                    <ScrollViewer MaxHeight="200" 
+                                VerticalScrollBarVisibility="Auto">
+                        <ItemsControl x:Name="addedRecipesList"
+                                    Margin="5">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Name}"
+                                             Foreground="White"
+                                             TextTrimming="CharacterEllipsis"
+                                             Margin="5,2"/>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </ScrollViewer>
+                </Border>
             </StackPanel>
         </Grid>
 
@@ -230,13 +261,13 @@
             <!-- Favorite Recipes Page -->
             <Grid x:Name="favoriteRecipePage" Visibility="Collapsed">
                 <Frame x:Name="favoriteFrame" 
-           NavigationUIVisibility="Hidden"/>
+                       NavigationUIVisibility="Hidden"/>
             </Grid>
 
             <!-- Shopping List Page -->
             <Grid x:Name="shoppingListPage" Visibility="Collapsed">
                 <Frame x:Name="shoppingFrame" 
-           NavigationUIVisibility="Hidden"/>
+                       NavigationUIVisibility="Hidden"/>
             </Grid>
         </Grid>
     </Grid>

@@ -9,6 +9,7 @@ using Microsoft.Win32;
 using System.IO;
 using CookBook.RecipeManager.GUI.Models;
 using RecipeManager.DataBase;
+using RecipeManager.BusinessLogic;
 
 namespace CookBook.RecipeManager.GUI.Pages
 {
@@ -16,6 +17,8 @@ namespace CookBook.RecipeManager.GUI.Pages
     {
         private ObservableCollection<ShoppingListItem> _shoppingItems;
         private readonly ShoppingListDatabase _shoppingListDatabase;
+        private readonly ShoppingListMerger _merger = new ShoppingListMerger();
+
 
         public ShoppingListPage()
         {
@@ -173,6 +176,36 @@ namespace CookBook.RecipeManager.GUI.Pages
                 {
                     MessageBox.Show($"Error saving file: {ex.Message}");
                 }
+            }
+        }
+
+        private void BtnMergeItems_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                // 创建当前列表的副本
+                var currentItems = _shoppingItems.ToList();
+
+                // 执行合并
+                var mergedItems = _merger.MergeItems(currentItems);
+
+                // 清空并更新列表
+                _shoppingItems.Clear();
+                foreach (var item in mergedItems)
+                {
+                    _shoppingItems.Add(item);
+                }
+
+                // 保存更新后的列表
+                SaveShoppingList();
+
+                MessageBox.Show("Shopping list items merged successfully!", "Success",
+                    MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error merging items: {ex.Message}", "Error",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
