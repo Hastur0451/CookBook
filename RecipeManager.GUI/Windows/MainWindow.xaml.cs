@@ -60,6 +60,7 @@ namespace CookBook.RecipeManager.GUI.Windows
                     break;
                 case "favoriteRecipeItem":
                     favoriteRecipePage.Visibility = Visibility.Visible;
+                    _favoritePage.LoadFavoriteRecipes(); // Refresh favorite recipes
                     break;
                 case "shoppingListItem":
                     shoppingListPage.Visibility = Visibility.Visible;
@@ -80,6 +81,11 @@ namespace CookBook.RecipeManager.GUI.Windows
             {
                 WelcomeSearchButton_Click(sender, e);
             }
+        }
+
+        public ShoppingListPage GetShoppingListPage()
+        {
+            return _shoppingPage;
         }
     }
 }

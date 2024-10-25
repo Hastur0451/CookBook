@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using CookBook.RecipeManager.GUI.Models;
 using RecipeManager.BusinessLogic;
+using CookBook.RecipeManager.GUI.Windows;
 
 namespace CookBook.RecipeManager.GUI.Pages
 {
@@ -66,9 +68,11 @@ namespace CookBook.RecipeManager.GUI.Pages
                     recipeTitle.Text = recipe.Name;
 
                     favoriteButton.RecipeId = selectedResult.Id;
-                    favoriteButton.IsFavorite = false; // TODO: 从存储中获取实际的收藏状态
+                    favoriteButton.IsFavorite = _recipeLogic.IsFavoriteRecipe(selectedResult.Id);
 
-                    ingredientsList.ItemsSource = recipe.Ingredients;
+                    // Update this part to use CheckBoxes
+                    ingredientsList.ItemsSource = _recipeLogic.GetFormattedIngredients(recipe)
+                        .Select(ingredient => new CheckBox { Content = $"{ingredient.Measure} {ingredient.Ingredient}", IsChecked = false });
 
                     recipeInstructions.Text = recipe.Instructions;
                     if (string.IsNullOrWhiteSpace(recipe.Instructions))
@@ -97,7 +101,23 @@ namespace CookBook.RecipeManager.GUI.Pages
 
         private void BtnSaveList_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Shopping list save feature will be available in a future update.", "Notice");
+            var checkedIngredients = ingredientsList.Items
+                .Cast<object>()
+                .Where(item => item is CheckBox checkBox && checkBox.IsChecked == true)
+                .Select(item => ((CheckBox)item).Content.ToString())
+                .ToList();
+
+            if (checkedIngredients.Any())
+            {
+                var mainWindow = (MainWindow)Application.Current.MainWindow;
+                var shoppingListPage = mainWindow.GetShoppingListPage();
+                shoppingListPage.AddIngredientsToShoppingList(checkedIngredients);
+                MessageBox.Show("Selected ingredients added to the shopping list!", "Success");
+            }
+            else
+            {
+                MessageBox.Show("No ingredients selected. Please check the ingredients you want to add to the shopping list.", "Information");
+            }
         }
 
         private void FavoriteButton_FavoriteChanged(object sender, FavoriteEventArgs e)
@@ -106,12 +126,16 @@ namespace CookBook.RecipeManager.GUI.Pages
             {
                 if (e.IsFavorite)
                 {
-                    // TODO: 保存收藏状态
-                    MessageBox.Show("Recipe added to favorites!");
+                    var recipe = _searchResults.FirstOrDefault(r => r.Id == e.RecipeId);
+                    if (recipe != null)
+                    {
+                        _recipeLogic.AddFavoriteRecipe(recipe);
+                        MessageBox.Show("Recipe added to favorites!");
+                    }
                 }
                 else
                 {
-                    // TODO: 移除收藏状态
+                    _recipeLogic.RemoveFavoriteRecipe(e.RecipeId);
                     MessageBox.Show("Recipe removed from favorites!");
                 }
             }

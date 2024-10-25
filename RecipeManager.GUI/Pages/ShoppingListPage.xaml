@@ -62,7 +62,8 @@
                                          Text="{Binding Quantity}"
                                          Margin="5,0"
                                          VerticalAlignment="Center"
-                                         PreviewMouseLeftButtonDown="Quantity_PreviewMouseLeftButtonDown"/>
+                                         PreviewMouseLeftButtonDown="Quantity_PreviewMouseLeftButtonDown"
+                                         LostFocus="Quantity_LostFocus"/>
 
                                 <!-- Delete Button -->
                                 <Button Grid.Column="3"

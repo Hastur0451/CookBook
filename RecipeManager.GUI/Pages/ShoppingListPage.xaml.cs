@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
@@ -7,34 +8,45 @@ using System.Windows.Input;
 using Microsoft.Win32;
 using System.IO;
 using CookBook.RecipeManager.GUI.Models;
+using RecipeManager.DataBase;
 
 namespace CookBook.RecipeManager.GUI.Pages
 {
     public partial class ShoppingListPage : Page
     {
         private ObservableCollection<ShoppingListItem> _shoppingItems;
+        private readonly ShoppingListDatabase _shoppingListDatabase;
 
         public ShoppingListPage()
         {
             InitializeComponent();
-            _shoppingItems = new ObservableCollection<ShoppingListItem>();
+            _shoppingListDatabase = new ShoppingListDatabase("shoppingList.json");
+            LoadShoppingList();
+        }
+
+        private void LoadShoppingList()
+        {
+            var loadedItems = _shoppingListDatabase.LoadShoppingList();
+            _shoppingItems = new ObservableCollection<ShoppingListItem>(loadedItems);
             shoppingList.ItemsSource = _shoppingItems;
+        }
+
+        private void SaveShoppingList()
+        {
+            _shoppingListDatabase.SaveShoppingList(_shoppingItems.ToList());
         }
 
         public void AddToShoppingList(string ingredient)
         {
-            // 检查是否已存在
             var existingItem = _shoppingItems.FirstOrDefault(item =>
                 item.Name.Equals(ingredient, StringComparison.OrdinalIgnoreCase));
 
             if (existingItem != null)
             {
-                // 如果已存在，只更新选中状态
                 existingItem.IsSelected = true;
             }
             else
             {
-                // 如果不存在，添加新项
                 _shoppingItems.Add(new ShoppingListItem
                 {
                     Name = ingredient,
@@ -42,6 +54,26 @@ namespace CookBook.RecipeManager.GUI.Pages
                     IsSelected = true
                 });
             }
+            RefreshShoppingList();
+            SaveShoppingList();
+        }
+
+        public void AddIngredientsToShoppingList(List<string> ingredients)
+        {
+            foreach (var ingredient in ingredients)
+            {
+                AddToShoppingList(ingredient);
+            }
+            RefreshShoppingList();
+            SaveShoppingList();
+        }
+
+        private void RefreshShoppingList()
+        {
+            // Force the UI to refresh
+            var temp = shoppingList.ItemsSource;
+            shoppingList.ItemsSource = null;
+            shoppingList.ItemsSource = temp;
         }
 
         private void BtnAddItem_Click(object sender, RoutedEventArgs e)
@@ -62,6 +94,7 @@ namespace CookBook.RecipeManager.GUI.Pages
                     IsSelected = true
                 });
                 addItemPopup.IsOpen = false;
+                SaveShoppingList();
             }
         }
 
@@ -75,6 +108,7 @@ namespace CookBook.RecipeManager.GUI.Pages
             if (sender is Button button && button.Tag is ShoppingListItem item)
             {
                 _shoppingItems.Remove(item);
+                SaveShoppingList();
             }
         }
 
@@ -140,6 +174,12 @@ namespace CookBook.RecipeManager.GUI.Pages
                     MessageBox.Show($"Error saving file: {ex.Message}");
                 }
             }
+        }
+
+        // Add this method to save changes when quantity is updated
+        private void Quantity_LostFocus(object sender, RoutedEventArgs e)
+        {
+            SaveShoppingList();
         }
     }
 }

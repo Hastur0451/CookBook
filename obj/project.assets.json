@@ -1099,24 +1099,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\zyx62\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#Assessment4\\CookBook\\CookBook.csproj",
+      "projectUniqueName": "C:\\Users\\zyx62\\OneDrive\\Desktop\\CookBook03\\CookBook.csproj",
       "projectName": "CookBook",
-      "projectPath": "D:\\C#Assessment4\\CookBook\\CookBook.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "D:\\C#Assessment4\\CookBook\\obj\\",
+      "projectPath": "C:\\Users\\zyx62\\OneDrive\\Desktop\\CookBook03\\CookBook.csproj",
+      "packagesPath": "C:\\Users\\zyx62\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\zyx62\\OneDrive\\Desktop\\CookBook03\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\zyx62\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1124,7 +1119,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

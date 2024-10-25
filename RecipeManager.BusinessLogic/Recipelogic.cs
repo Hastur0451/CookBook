@@ -1,17 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using RecipeManager.DataBase;
 
 namespace RecipeManager.BusinessLogic
 {
     public class RecipeLogic
     {
         private readonly TheMealDBClient _mealDbClient;
+        private readonly FavoriteRecipeDatabase _favoriteRecipeDatabase;
         // private readonly FatSecretApiClient _fatSecretClient;
 
         public RecipeLogic(string fatSecretConsumerKey, string fatSecretConsumerSecret)
         {
             _mealDbClient = new TheMealDBClient();
+            _favoriteRecipeDatabase = new FavoriteRecipeDatabase("favoriteRecipes.json");
             // _fatSecretClient = new FatSecretApiClient(fatSecretConsumerKey, fatSecretConsumerSecret);
         }
 
@@ -74,6 +77,26 @@ namespace RecipeManager.BusinessLogic
 
             return (ingredientsNutrition, totalNutrition);
         }*/
+
+        public void AddFavoriteRecipe(RecipeSearchResult recipe)
+        {
+            _favoriteRecipeDatabase.AddFavoriteRecipe(recipe);
+        }
+
+        public void RemoveFavoriteRecipe(string recipeId)
+        {
+            _favoriteRecipeDatabase.RemoveFavoriteRecipe(recipeId);
+        }
+
+        public bool IsFavoriteRecipe(string recipeId)
+        {
+            return _favoriteRecipeDatabase.IsFavoriteRecipe(recipeId);
+        }
+
+        public List<RecipeSearchResult> GetFavoriteRecipes()
+        {
+            return _favoriteRecipeDatabase.LoadFavoriteRecipes();
+        }
     }
 
     public class IngredientNutrition

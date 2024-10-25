@@ -16,16 +16,20 @@ namespace CookBook.RecipeManager.GUI.Pages
         {
             InitializeComponent();
             _recipeLogic = recipeLogic;
-            LoadFavoriteRecipes();
         }
 
-        private async void LoadFavoriteRecipes()
+        public void LoadFavoriteRecipes()
         {
             try
             {
-                // TODO: 从存储中获取收藏的食谱列表
-                _favoriteRecipes = new List<RecipeSearchResult>();
+                _favoriteRecipes = _recipeLogic.GetFavoriteRecipes();
+                lstFavorites.ItemsSource = null; // Clear the current ItemsSource
                 lstFavorites.ItemsSource = _favoriteRecipes;
+
+                if (_favoriteRecipes.Count == 0)
+                {
+                    MessageBox.Show("You have no favorite recipes yet.", "No Favorites");
+                }
             }
             catch (Exception ex)
             {
@@ -59,9 +63,9 @@ namespace CookBook.RecipeManager.GUI.Pages
                     recipeTitle.Text = recipe.Name;
 
                     favoriteButton.RecipeId = selectedResult.Id;
-                    favoriteButton.IsFavorite = true; // 因为是收藏页面，所以默认为true
+                    favoriteButton.IsFavorite = true;
 
-                    ingredientsList.ItemsSource = recipe.Ingredients;
+                    ingredientsList.ItemsSource = _recipeLogic.GetFormattedIngredients(recipe);
 
                     recipeInstructions.Text = recipe.Instructions;
                     if (string.IsNullOrWhiteSpace(recipe.Instructions))
@@ -86,15 +90,9 @@ namespace CookBook.RecipeManager.GUI.Pages
         {
             if (!e.IsFavorite)
             {
-                // 从收藏列表中移除
-                var recipeToRemove = _favoriteRecipes.FirstOrDefault(r => r.Id == e.RecipeId);
-                if (recipeToRemove != null)
-                {
-                    _favoriteRecipes.Remove(recipeToRemove);
-                    lstFavorites.ItemsSource = null;
-                    lstFavorites.ItemsSource = _favoriteRecipes;
-                    recipeDetailPanel.Visibility = Visibility.Collapsed;
-                }
+                _recipeLogic.RemoveFavoriteRecipe(e.RecipeId);
+                LoadFavoriteRecipes();
+                recipeDetailPanel.Visibility = Visibility.Collapsed;
             }
         }
 

@@ -4,7 +4,7 @@
 winexe
 C#
 .cs
-D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\
+C:\Users\zyx62\OneDrive\Desktop\CookBook03\obj\Debug\net8.0-windows\
 RecipeManager
 none
 false
@@ -12,8 +12,8 @@ TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 
 7-1522955971
 
-18-1278671183
-221-319716500
+221374487574
+221-1035799928
 RecipeManager.GUI\Pages\CustomRecipePage.xaml;RecipeManager.GUI\Pages\FavoriteButton.xaml;RecipeManager.GUI\Pages\FavoriteRecipePage.xaml;RecipeManager.GUI\Pages\SearchRecipePage.xaml;RecipeManager.GUI\Pages\ShoppingListPage.xaml;RecipeManager.GUI\Windows\App.xaml;RecipeManager.GUI\Windows\MainWindow.xaml;
 
 False
