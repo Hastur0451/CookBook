@@ -1,45 +1,45 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\",
+  "WorkspaceRootPath": "D:\\C#Assessment4\\CookBook\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\uts file\\application development with .net\\assessment 2\\cookbook\\recipemanager.gui\\windows\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:recipemanager.gui\\windows\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\uts file\\application development with .net\\assessment 2\\cookbook\\recipemanager.gui\\windows\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:recipemanager.gui\\windows\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\uts file\\application development with .net\\assessment 2\\cookbook\\recipemanager.gui\\pages\\customrecipepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\c#assessment4\\cookbook\\recipemanager.gui\\pages\\customrecipepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:recipemanager.gui\\pages\\customrecipepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\uts file\\application development with .net\\assessment 2\\cookbook\\recipemanager.gui\\windows\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:recipemanager.gui\\windows\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\uts file\\application development with .net\\assessment 2\\cookbook\\recipemanager.gui\\windows\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\c#assessment4\\cookbook\\recipemanager.gui\\windows\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:recipemanager.gui\\windows\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\uts file\\application development with .net\\assessment 2\\cookbook\\recipemanager.gui\\pages\\customrecipepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:recipemanager.gui\\pages\\customrecipepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\c#assessment4\\cookbook\\recipemanager.gui\\windows\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:recipemanager.gui\\windows\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\uts file\\application development with .net\\assessment 2\\cookbook\\recipemanager.gui\\pages\\searchrecipepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:recipemanager.gui\\pages\\searchrecipepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\uts file\\application development with .net\\assessment 2\\cookbook\\recipemanager.gui\\pages\\searchrecipepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:recipemanager.gui\\pages\\searchrecipepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\uts file\\application development with .net\\assessment 2\\cookbook\\cookbook.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\c#assessment4\\cookbook\\cookbook.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:cookbook.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\uts file\\application development with .net\\assessment 2\\cookbook\\recipemanager.gui\\pages\\customrecipepage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\c#assessment4\\cookbook\\recipemanager.gui\\pages\\customrecipepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:recipemanager.gui\\pages\\customrecipepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\c#assessment4\\cookbook\\recipemanager.gui\\pages\\searchrecipepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:recipemanager.gui\\pages\\searchrecipepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\c#assessment4\\cookbook\\recipemanager.gui\\pages\\searchrecipepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:recipemanager.gui\\pages\\searchrecipepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\c#assessment4\\cookbook\\recipemanager.gui\\windows\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:recipemanager.gui\\windows\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\c#assessment4\\cookbook\\recipemanager.gui\\windows\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:recipemanager.gui\\windows\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\c#assessment4\\cookbook\\recipemanager.gui\\pages\\customrecipepage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:recipemanager.gui\\pages\\customrecipepage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
@@ -50,61 +50,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CustomRecipePage.xaml.cs",
-              "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\RecipeManager.GUI\\Pages\\CustomRecipePage.xaml.cs",
-              "RelativeDocumentMoniker": "RecipeManager.GUI\\Pages\\CustomRecipePage.xaml.cs",
-              "ToolTip": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\RecipeManager.GUI\\Pages\\CustomRecipePage.xaml.cs",
-              "RelativeToolTip": "RecipeManager.GUI\\Pages\\CustomRecipePage.xaml.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAUwBwAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T13:32:21.756Z"
+              "DocumentIndex": 4,
+              "Title": "CustomRecipePage.xaml",
+              "DocumentMoniker": "D:\\C#Assessment4\\CookBook\\RecipeManager.GUI\\Pages\\CustomRecipePage.xaml",
+              "RelativeDocumentMoniker": "RecipeManager.GUI\\Pages\\CustomRecipePage.xaml",
+              "ToolTip": "D:\\C#Assessment4\\CookBook\\RecipeManager.GUI\\Pages\\CustomRecipePage.xaml",
+              "RelativeToolTip": "RecipeManager.GUI\\Pages\\CustomRecipePage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-24T13:32:19.837Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "CustomRecipePage.xaml",
-              "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\RecipeManager.GUI\\Pages\\CustomRecipePage.xaml",
-              "RelativeDocumentMoniker": "RecipeManager.GUI\\Pages\\CustomRecipePage.xaml",
-              "ToolTip": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\RecipeManager.GUI\\Pages\\CustomRecipePage.xaml",
-              "RelativeToolTip": "RecipeManager.GUI\\Pages\\CustomRecipePage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-24T13:32:19.837Z"
+              "Title": "SearchRecipePage.xaml.cs",
+              "DocumentMoniker": "D:\\C#Assessment4\\CookBook\\RecipeManager.GUI\\Pages\\SearchRecipePage.xaml.cs",
+              "RelativeDocumentMoniker": "RecipeManager.GUI\\Pages\\SearchRecipePage.xaml.cs",
+              "ToolTip": "D:\\C#Assessment4\\CookBook\\RecipeManager.GUI\\Pages\\SearchRecipePage.xaml.cs",
+              "RelativeToolTip": "RecipeManager.GUI\\Pages\\SearchRecipePage.xaml.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAA0wE0AAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T13:30:43.463Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "SearchRecipePage.xaml.cs",
-              "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\RecipeManager.GUI\\Pages\\SearchRecipePage.xaml.cs",
-              "RelativeDocumentMoniker": "RecipeManager.GUI\\Pages\\SearchRecipePage.xaml.cs",
-              "ToolTip": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\RecipeManager.GUI\\Pages\\SearchRecipePage.xaml.cs",
-              "RelativeToolTip": "RecipeManager.GUI\\Pages\\SearchRecipePage.xaml.cs",
-              "ViewState": "AQIAAEAAAAAAAAAAAAAuwE0AAABMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T13:30:43.463Z"
+              "Title": "SearchRecipePage.xaml",
+              "DocumentMoniker": "D:\\C#Assessment4\\CookBook\\RecipeManager.GUI\\Pages\\SearchRecipePage.xaml",
+              "RelativeDocumentMoniker": "RecipeManager.GUI\\Pages\\SearchRecipePage.xaml",
+              "ToolTip": "D:\\C#Assessment4\\CookBook\\RecipeManager.GUI\\Pages\\SearchRecipePage.xaml",
+              "RelativeToolTip": "RecipeManager.GUI\\Pages\\SearchRecipePage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-24T13:30:18.468Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "SearchRecipePage.xaml",
-              "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\RecipeManager.GUI\\Pages\\SearchRecipePage.xaml",
-              "RelativeDocumentMoniker": "RecipeManager.GUI\\Pages\\SearchRecipePage.xaml",
-              "ToolTip": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\RecipeManager.GUI\\Pages\\SearchRecipePage.xaml",
-              "RelativeToolTip": "RecipeManager.GUI\\Pages\\SearchRecipePage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-24T13:30:18.468Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\RecipeManager.GUI\\Windows\\MainWindow.xaml",
+              "DocumentMoniker": "D:\\C#Assessment4\\CookBook\\RecipeManager.GUI\\Windows\\MainWindow.xaml",
               "RelativeDocumentMoniker": "RecipeManager.GUI\\Windows\\MainWindow.xaml",
-              "ToolTip": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\RecipeManager.GUI\\Windows\\MainWindow.xaml",
+              "ToolTip": "D:\\C#Assessment4\\CookBook\\RecipeManager.GUI\\Windows\\MainWindow.xaml",
               "RelativeToolTip": "RecipeManager.GUI\\Windows\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-10-24T12:59:21.449Z",
@@ -112,59 +107,74 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\RecipeManager.GUI\\Windows\\App.xaml.cs",
-              "RelativeDocumentMoniker": "RecipeManager.GUI\\Windows\\App.xaml.cs",
-              "ToolTip": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\RecipeManager.GUI\\Windows\\App.xaml.cs",
-              "RelativeToolTip": "RecipeManager.GUI\\Windows\\App.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "CustomRecipePage.xaml.cs",
+              "DocumentMoniker": "D:\\C#Assessment4\\CookBook\\RecipeManager.GUI\\Pages\\CustomRecipePage.xaml.cs",
+              "RelativeDocumentMoniker": "RecipeManager.GUI\\Pages\\CustomRecipePage.xaml.cs",
+              "ToolTip": "D:\\C#Assessment4\\CookBook\\RecipeManager.GUI\\Pages\\CustomRecipePage.xaml.cs",
+              "RelativeToolTip": "RecipeManager.GUI\\Pages\\CustomRecipePage.xaml.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAYwBwAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T12:48:32.816Z"
+              "WhenOpened": "2024-10-24T13:32:21.756Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\RecipeManager.GUI\\Windows\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "RecipeManager.GUI\\Windows\\MainWindow.xaml.cs",
-              "ToolTip": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\RecipeManager.GUI\\Windows\\MainWindow.xaml.cs",
-              "RelativeToolTip": "RecipeManager.GUI\\Windows\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE0AAAABAAAA",
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "D:\\C#Assessment4\\CookBook\\RecipeManager.GUI\\Windows\\App.xaml.cs",
+              "RelativeDocumentMoniker": "RecipeManager.GUI\\Windows\\App.xaml.cs",
+              "ToolTip": "D:\\C#Assessment4\\CookBook\\RecipeManager.GUI\\Windows\\App.xaml.cs",
+              "RelativeToolTip": "RecipeManager.GUI\\Windows\\App.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T12:44:59Z"
+              "WhenOpened": "2024-10-24T12:48:32.816Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\C#Assessment4\\CookBook\\RecipeManager.GUI\\Windows\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "RecipeManager.GUI\\Windows\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\C#Assessment4\\CookBook\\RecipeManager.GUI\\Windows\\MainWindow.xaml.cs",
+              "RelativeToolTip": "RecipeManager.GUI\\Windows\\MainWindow.xaml.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAAIwE0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T12:44:59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "CookBook.csproj",
-              "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\CookBook.csproj",
+              "DocumentMoniker": "D:\\C#Assessment4\\CookBook\\CookBook.csproj",
               "RelativeDocumentMoniker": "CookBook.csproj",
-              "ToolTip": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\CookBook.csproj",
+              "ToolTip": "D:\\C#Assessment4\\CookBook\\CookBook.csproj",
               "RelativeToolTip": "CookBook.csproj",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABsAAAANAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-22T11:29:28.765Z"
+              "WhenOpened": "2024-10-22T11:29:28.765Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "CustomRecipePage.xaml",
-              "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\RecipeManager.GUI\\Pages\\CustomRecipePage.xaml",
+              "DocumentMoniker": "D:\\C#Assessment4\\CookBook\\RecipeManager.GUI\\Pages\\CustomRecipePage.xaml",
               "RelativeDocumentMoniker": "RecipeManager.GUI\\Pages\\CustomRecipePage.xaml",
-              "ToolTip": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\RecipeManager.GUI\\Pages\\CustomRecipePage.xaml",
+              "ToolTip": "D:\\C#Assessment4\\CookBook\\RecipeManager.GUI\\Pages\\CustomRecipePage.xaml",
               "RelativeToolTip": "RecipeManager.GUI\\Pages\\CustomRecipePage.xaml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB8AAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-10-24T07:02:12.857Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "App.xaml",
-              "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\RecipeManager.GUI\\Windows\\App.xaml",
+              "DocumentMoniker": "D:\\C#Assessment4\\CookBook\\RecipeManager.GUI\\Windows\\App.xaml",
               "RelativeDocumentMoniker": "RecipeManager.GUI\\Windows\\App.xaml",
-              "ToolTip": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Cookbook\\RecipeManager.GUI\\Windows\\App.xaml",
+              "ToolTip": "D:\\C#Assessment4\\CookBook\\RecipeManager.GUI\\Windows\\App.xaml",
               "RelativeToolTip": "RecipeManager.GUI\\Windows\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-10-23T12:12:21.46Z"
