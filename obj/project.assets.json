@@ -1104,11 +1104,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zyx62\\OneDrive\\Desktop\\CookBook\\CookBook.csproj",
+      "projectUniqueName": "C:\\Users\\zyx62\\OneDrive\\Desktop\\CookBook03\\CookBook.csproj",
       "projectName": "CookBook",
-      "projectPath": "C:\\Users\\zyx62\\OneDrive\\Desktop\\CookBook\\CookBook.csproj",
+      "projectPath": "C:\\Users\\zyx62\\OneDrive\\Desktop\\CookBook03\\CookBook.csproj",
       "packagesPath": "C:\\Users\\zyx62\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\zyx62\\OneDrive\\Desktop\\CookBook\\obj\\",
+      "outputPath": "C:\\Users\\zyx62\\OneDrive\\Desktop\\CookBook03\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\zyx62\\AppData\\Roaming\\NuGet\\NuGet.Config",

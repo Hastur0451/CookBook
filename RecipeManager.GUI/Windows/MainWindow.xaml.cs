@@ -11,7 +11,8 @@ namespace CookBook.RecipeManager.GUI.Windows
     {
         private readonly RecipeLogic _recipeLogic;
         private SearchRecipePage _searchPage;
-
+        private FavoriteRecipePage _favoritePage;
+        private ShoppingListPage _shoppingPage;
         public MainWindow()
         {
             try
@@ -21,9 +22,15 @@ namespace CookBook.RecipeManager.GUI.Windows
                 string fatSecretConsumerSecret = "f72938e96e4e4ee7bf42873070c91110";
                 _recipeLogic = new RecipeLogic(fatSecretConsumerKey, fatSecretConsumerSecret);
 
-                // Initialize search page
+                // 初始化搜索页面
                 _searchPage = new SearchRecipePage(_recipeLogic);
                 searchFrame.Content = _searchPage;
+
+                _favoritePage = new FavoriteRecipePage(_recipeLogic);
+                favoriteFrame.Content = _favoritePage;
+
+                _shoppingPage = new ShoppingListPage();
+                shoppingFrame.Content = _shoppingPage;
             }
             catch (Exception ex)
             {
@@ -53,6 +60,7 @@ namespace CookBook.RecipeManager.GUI.Windows
                     break;
                 case "favoriteRecipeItem":
                     favoriteRecipePage.Visibility = Visibility.Visible;
+                    _favoritePage.LoadFavoriteRecipes(); // Refresh favorite recipes
                     break;
                 case "shoppingListItem":
                     shoppingListPage.Visibility = Visibility.Visible;
@@ -73,6 +81,11 @@ namespace CookBook.RecipeManager.GUI.Windows
             {
                 WelcomeSearchButton_Click(sender, e);
             }
+        }
+
+        public ShoppingListPage GetShoppingListPage()
+        {
+            return _shoppingPage;
         }
     }
 }

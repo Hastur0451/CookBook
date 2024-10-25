@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OdaokHqdUAA=",
+  "dgSpecHash": "OOBkNb9AjLc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\zyx62\\OneDrive\\Desktop\\CookBook\\CookBook.csproj",
+  "projectFilePath": "C:\\Users\\zyx62\\OneDrive\\Desktop\\CookBook03\\CookBook.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\zyx62\\.nuget\\packages\\dynamitey\\2.0.10.189\\dynamitey.2.0.10.189.nupkg.sha512",
     "C:\\Users\\zyx62\\.nuget\\packages\\extendedwpfconverters\\2.0.3\\extendedwpfconverters.2.0.3.nupkg.sha512",

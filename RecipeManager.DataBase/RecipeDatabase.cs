@@ -31,5 +31,12 @@ namespace RecipeManager.DataBase
             var json = JsonSerializer.Serialize(recipes, new JsonSerializerOptions { WriteIndented = true });
             File.WriteAllText(_filePath, json);
         }
+
+        public void AddRecipe(CustomRecipe recipe)
+        {
+            var recipes = LoadRecipes();
+            recipes.Add(recipe);
+            SaveRecipes(recipes);
+        }
     }
 }

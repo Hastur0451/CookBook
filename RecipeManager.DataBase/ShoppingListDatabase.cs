@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
+using CookBook.RecipeManager.GUI.Models;
 
 namespace RecipeManager.DataBase
 {
@@ -14,26 +15,19 @@ namespace RecipeManager.DataBase
             _filePath = filePath;
         }
 
-        public List<string> LoadShoppingList()
+        public List<ShoppingListItem> LoadShoppingList()
         {
             if (!File.Exists(_filePath))
             {
-                return new List<string>();
+                return new List<ShoppingListItem>();
             }
 
             var json = File.ReadAllText(_filePath);
-            return JsonSerializer.Deserialize<List<string>>(json) ?? new List<string>();
+            return JsonSerializer.Deserialize<List<ShoppingListItem>>(json) ?? new List<ShoppingListItem>();
         }
 
-        public void SaveShoppingList(List<string> shoppingList)
+        public void SaveShoppingList(List<ShoppingListItem> shoppingList)
         {
-            // Ensure the directory exists
-            var directory = Path.GetDirectoryName(_filePath);
-            if (!string.IsNullOrEmpty(directory) && !Directory.Exists(directory))
-            {
-                Directory.CreateDirectory(directory);
-            }
-
             var json = JsonSerializer.Serialize(shoppingList, new JsonSerializerOptions { WriteIndented = true });
             File.WriteAllText(_filePath, json);
         }
