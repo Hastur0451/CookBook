@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 
-5-1897259395
+61236978682
 
-131608567474
+14333646809
 221-319716500
-RecipeManager.GUI\Pages\CustomRecipePage.xaml;RecipeManager.GUI\Pages\FavoriteButton.xaml;RecipeManager.GUI\Pages\SearchRecipePage.xaml;RecipeManager.GUI\Windows\App.xaml;RecipeManager.GUI\Windows\MainWindow.xaml;
+RecipeManager.GUI\Pages\CustomRecipePage.xaml;RecipeManager.GUI\Pages\FavoriteButton.xaml;RecipeManager.GUI\Pages\FavoriteRecipePage.xaml;RecipeManager.GUI\Pages\SearchRecipePage.xaml;RecipeManager.GUI\Windows\App.xaml;RecipeManager.GUI\Windows\MainWindow.xaml;
 
 False
 
