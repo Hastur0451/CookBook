@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
+using CookBook.RecipeManager.GUI.Models;
 using RecipeManager.BusinessLogic;
 
 namespace CookBook.RecipeManager.GUI.Pages
@@ -64,6 +65,9 @@ namespace CookBook.RecipeManager.GUI.Pages
                     recipeDetailPanel.Visibility = Visibility.Visible;
                     recipeTitle.Text = recipe.Name;
 
+                    favoriteButton.RecipeId = selectedResult.Id;
+                    favoriteButton.IsFavorite = false; // TODO: 从存储中获取实际的收藏状态
+
                     ingredientsList.ItemsSource = recipe.Ingredients;
 
                     recipeInstructions.Text = recipe.Instructions;
@@ -94,6 +98,27 @@ namespace CookBook.RecipeManager.GUI.Pages
         private void BtnSaveList_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Shopping list save feature will be available in a future update.", "Notice");
+        }
+
+        private void FavoriteButton_FavoriteChanged(object sender, FavoriteEventArgs e)
+        {
+            try
+            {
+                if (e.IsFavorite)
+                {
+                    // TODO: 保存收藏状态
+                    MessageBox.Show("Recipe added to favorites!");
+                }
+                else
+                {
+                    // TODO: 移除收藏状态
+                    MessageBox.Show("Recipe removed from favorites!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error updating favorite status: {ex.Message}");
+            }
         }
     }
 }

@@ -11,7 +11,8 @@ namespace CookBook.RecipeManager.GUI.Windows
     {
         private readonly RecipeLogic _recipeLogic;
         private SearchRecipePage _searchPage;
-
+        private FavoriteRecipePage _favoritePage;
+        private ShoppingListPage _shoppingPage;
         public MainWindow()
         {
             try
@@ -24,6 +25,12 @@ namespace CookBook.RecipeManager.GUI.Windows
                 // 初始化搜索页面
                 _searchPage = new SearchRecipePage(_recipeLogic);
                 searchFrame.Content = _searchPage;
+
+                _favoritePage = new FavoriteRecipePage(_recipeLogic);
+                favoriteFrame.Content = _favoritePage;
+
+                _shoppingPage = new ShoppingListPage();
+                shoppingFrame.Content = _shoppingPage;
             }
             catch (Exception ex)
             {

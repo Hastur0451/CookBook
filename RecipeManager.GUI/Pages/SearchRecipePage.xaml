@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:CookBook.RecipeManager.GUI.Pages"
+      xmlns:models="clr-namespace:CookBook.RecipeManager.GUI.Models"
       mc:Ignorable="d" 
       Title="SearchRecipePage">
 
@@ -70,13 +71,17 @@
                         Visibility="Collapsed">
                     <DockPanel Margin="20">
                         <!-- Title -->
-                        <TextBlock x:Name="recipeTitle" 
-                                 DockPanel.Dock="Top"
-                                 FontSize="28"
-                                 FontWeight="Bold"
-                                 Foreground="{StaticResource TextPrimaryBrush}"
-                                 Margin="0,0,0,20"/>
-
+						<DockPanel DockPanel.Dock="Top" Margin="0,0,0,20">
+							<models:FavoriteButton x:Name="favoriteButton"
+												  DockPanel.Dock="Right"
+												  Margin="10,0,0,0"
+												  VerticalAlignment="Center"
+												  FavoriteChanged="FavoriteButton_FavoriteChanged"/>
+							<TextBlock x:Name="recipeTitle"
+									  FontSize="28"
+									  FontWeight="Bold"
+									  Foreground="{StaticResource TextPrimaryBrush}"/>
+						</DockPanel>
                         <!-- Save Button -->
                         <Button x:Name="btnSaveList"
                                 DockPanel.Dock="Bottom"
