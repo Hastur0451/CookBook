@@ -137,6 +137,9 @@
                                 Width="100"
                                 Height="45"
                                 FontSize="16"
+								FontWeight="Bold"  
+                                Foreground="White"  
+                                Background="Purple" 
                                 Margin="10,0,0,0"
                                 Click="WelcomeSearchButton_Click"/>
                     </Grid>

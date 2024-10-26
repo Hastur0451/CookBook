@@ -8,5 +8,15 @@
     "Id": "53053",
     "Name": "Beef Rendang",
     "Image": "https://www.themealdb.com/images/media/meals/bc8v651619789840.jpg"
+  },
+  {
+    "Id": "52971",
+    "Name": "Kafteji",
+    "Image": "https://www.themealdb.com/images/media/meals/1bsv1q1560459826.jpg"
+  },
+  {
+    "Id": "52906",
+    "Name": "Flamiche",
+    "Image": "https://www.themealdb.com/images/media/meals/wssvvs1511785879.jpg"
   }
 ]
