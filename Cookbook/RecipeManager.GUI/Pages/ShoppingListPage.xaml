@@ -4,10 +4,19 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:CookBook.RecipeManager.GUI.Pages"
-      mc:Ignorable="d" 
-      Title="ShoppingListPage">
+      mc:Ignorable="d">
 
-    <Grid Margin="20">
+    <Page.Resources>
+        <Style x:Key="PopupStyle" TargetType="Border">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="4"/>
+            <Setter Property="Padding" Value="20"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid x:Name="mainGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -17,22 +26,14 @@
         <!-- Header Area -->
         <DockPanel Grid.Row="0" Margin="0,0,0,20">
             <TextBlock Text="Shopping List"
-              FontSize="24"
-              FontWeight="Bold"
-              Foreground="{StaticResource TextPrimaryBrush}"/>
+                      FontSize="24"
+                      FontWeight="Bold"
+                      Foreground="{StaticResource TextPrimaryBrush}"/>
 
-            <!-- Add New Item Button and Merge Button -->
-            <StackPanel DockPanel.Dock="Right" 
-                Orientation="Horizontal">
-                <Button Content="Merge Similar"
-                Width="100"
-                Margin="0,0,10,0"
-                Click="BtnMergeItems_Click"/>
-
-                <Button Content="Add Item"
-                Width="100"
-                Click="BtnAddItem_Click"/>
-            </StackPanel>
+            <Button Content="Add Item"
+                    DockPanel.Dock="Right"
+                    Width="100"
+                    Click="BtnAddItem_Click"/>
         </DockPanel>
 
         <!-- Shopping List Area -->
@@ -49,22 +50,26 @@
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="100"/>
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
 
-                                <!-- Checkbox -->
                                 <CheckBox Grid.Column="0" 
                                          IsChecked="{Binding IsSelected}"
                                          VerticalAlignment="Center"
                                          Margin="0,0,10,0"/>
 
-                                <!-- Item Name -->
                                 <TextBlock Grid.Column="1" 
                                          Text="{Binding Name}"
                                          VerticalAlignment="Center"/>
 
-                                <!-- Delete Button -->
-                                <Button Grid.Column="2"
+                                <TextBox Grid.Column="2"
+                                        Text="{Binding Quantity}"
+                                        Margin="5,0"
+                                        VerticalAlignment="Center"
+                                        PreviewMouseLeftButtonDown="Quantity_PreviewMouseLeftButtonDown"/>
+
+                                <Button Grid.Column="3"
                                         Content="✕"
                                         Width="30"
                                         Height="30"
@@ -95,13 +100,10 @@
 
         <!-- Add Item Popup -->
         <Popup x:Name="addItemPopup"
-               PlacementTarget="{Binding ElementName=MainGrid}"
+               Placement="Center"
+               AllowsTransparency="True"
                StaysOpen="False">
-            <Border Background="White"
-                    BorderBrush="{StaticResource BorderBrush}"
-                    BorderThickness="1"
-                    CornerRadius="4"
-                    Padding="20">
+            <Border Style="{StaticResource PopupStyle}">
                 <StackPanel Width="300">
                     <TextBlock Text="Add New Item"
                              FontSize="18"

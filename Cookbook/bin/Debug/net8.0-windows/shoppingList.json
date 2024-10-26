@@ -1,27 +1,34 @@
 [
   {
-    "Name": "1 Cinnamon Stick",
-    "Quantity": "1",
+    "Name": "1 cup Water",
     "IsSelected": true
   },
   {
-    "Name": "1300g Potatoes",
-    "Quantity": "1",
+    "Name": "1 tsp Ginger",
     "IsSelected": true
   },
   {
-    "Name": "1360.78g Beef",
-    "Quantity": "1",
+    "Name": "1 tsp Soy Sauce",
     "IsSelected": true
   },
   {
-    "Name": "3 tbs Olive Oil",
-    "Quantity": "1",
+    "Name": "1 tsp Sugar",
     "IsSelected": true
   },
   {
-    "Name": "5 tbs Vegetable Oil",
-    "Quantity": "1",
+    "Name": "1/2 Egg",
+    "IsSelected": true
+  },
+  {
+    "Name": "1/4 cup Soy Sauce",
+    "IsSelected": true
+  },
+  {
+    "Name": "1907.18g Beef",
+    "IsSelected": true
+  },
+  {
+    "Name": "3 cloves Garlic",
     "IsSelected": true
   }
 ]

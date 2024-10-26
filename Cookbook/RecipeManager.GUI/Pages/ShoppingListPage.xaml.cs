@@ -19,7 +19,6 @@ namespace CookBook.RecipeManager.GUI.Pages
         private readonly ShoppingListDatabase _shoppingListDatabase;
         private readonly ShoppingListMerger _merger = new ShoppingListMerger();
 
-
         public ShoppingListPage()
         {
             InitializeComponent();
@@ -41,20 +40,25 @@ namespace CookBook.RecipeManager.GUI.Pages
 
         public void AddToShoppingList(string ingredient)
         {
+            // 使用 ParseIngredient 处理输入的配料字符串
+            var newItem = new ShoppingListItem(ingredient);
+
             var existingItem = _shoppingItems.FirstOrDefault(item =>
-                item.Name.Equals(ingredient, StringComparison.OrdinalIgnoreCase));
+                item.Name.Equals(newItem.Name, StringComparison.OrdinalIgnoreCase));
 
             if (existingItem != null)
             {
                 existingItem.IsSelected = true;
+                // 可以在这里处理数量合并逻辑
+                if (double.TryParse(existingItem.Quantity.Split(' ')[0], out double existingQuantity) &&
+                    double.TryParse(newItem.Quantity.Split(' ')[0], out double newQuantity))
+                {
+                    existingItem.Quantity = $"{existingQuantity + newQuantity} {existingItem.Quantity.Split(' ')[1]}";
+                }
             }
             else
             {
-                _shoppingItems.Add(new ShoppingListItem
-                {
-                    Name = ingredient,
-                    IsSelected = true
-                });
+                _shoppingItems.Add(newItem);
             }
             RefreshShoppingList();
             SaveShoppingList();
@@ -72,7 +76,6 @@ namespace CookBook.RecipeManager.GUI.Pages
 
         private void RefreshShoppingList()
         {
-            // Force the UI to refresh
             var temp = shoppingList.ItemsSource;
             shoppingList.ItemsSource = null;
             shoppingList.ItemsSource = temp;
@@ -81,7 +84,7 @@ namespace CookBook.RecipeManager.GUI.Pages
         private void BtnAddItem_Click(object sender, RoutedEventArgs e)
         {
             txtNewItemName.Text = "";
-            txtNewItemQuantity.Text = "";
+            txtNewItemQuantity.Text = "1";
             addItemPopup.IsOpen = true;
         }
 
@@ -89,13 +92,10 @@ namespace CookBook.RecipeManager.GUI.Pages
         {
             if (!string.IsNullOrWhiteSpace(txtNewItemName.Text))
             {
-                _shoppingItems.Add(new ShoppingListItem
-                {
-                    Name = txtNewItemName.Text.Trim(),
-                    IsSelected = true
-                });
+                var quantity = string.IsNullOrWhiteSpace(txtNewItemQuantity.Text) ? "1" : txtNewItemQuantity.Text;
+                var ingredient = $"{quantity} {txtNewItemName.Text.Trim()}";
+                AddToShoppingList(ingredient);
                 addItemPopup.IsOpen = false;
-                SaveShoppingList();
             }
         }
 
@@ -129,11 +129,18 @@ namespace CookBook.RecipeManager.GUI.Pages
                 string shoppingList = "Shopping List:\n\n";
                 foreach (var item in selectedItems)
                 {
-                    shoppingList += $"- {item.Name}\n";
+                    shoppingList += $"- {item.Quantity} {item.Name}\n";
                 }
 
-                Clipboard.SetText(shoppingList);
-                MessageBox.Show("Shopping list copied to clipboard!");
+                try
+                {
+                    Clipboard.SetText(shoppingList);
+                    MessageBox.Show("Shopping list copied to clipboard!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error copying to clipboard: {ex.Message}");
+                }
             }
             else
             {
@@ -164,7 +171,7 @@ namespace CookBook.RecipeManager.GUI.Pages
                     string shoppingList = "Shopping List:\n\n";
                     foreach (var item in selectedItems)
                     {
-                        shoppingList += $"- {item.Name}\n";
+                        shoppingList += $"- {item.Quantity} {item.Name}\n";
                     }
 
                     File.WriteAllText(saveFileDialog.FileName, shoppingList);
@@ -181,22 +188,16 @@ namespace CookBook.RecipeManager.GUI.Pages
         {
             try
             {
-                // 创建当前列表的副本
                 var currentItems = _shoppingItems.ToList();
-
-                // 执行合并
                 var mergedItems = _merger.MergeItems(currentItems);
 
-                // 清空并更新列表
                 _shoppingItems.Clear();
                 foreach (var item in mergedItems)
                 {
                     _shoppingItems.Add(item);
                 }
 
-                // 保存更新后的列表
                 SaveShoppingList();
-
                 MessageBox.Show("Shopping list items merged successfully!", "Success",
                     MessageBoxButton.OK, MessageBoxImage.Information);
             }
@@ -207,10 +208,27 @@ namespace CookBook.RecipeManager.GUI.Pages
             }
         }
 
-        // Add this method to save changes when quantity is updated
         private void Quantity_LostFocus(object sender, RoutedEventArgs e)
         {
-            SaveShoppingList();
+            if (sender is TextBox textBox && textBox.DataContext is ShoppingListItem item)
+            {
+                // 可以在这里添加数量格式验证
+                if (!string.IsNullOrWhiteSpace(textBox.Text))
+                {
+                    item.Quantity = textBox.Text;
+                    SaveShoppingList();
+                }
+            }
+        }
+
+        private void Quantity_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (sender is TextBox textBox)
+            {
+                // 可以在这里添加实时数量验证
+                string text = textBox.Text;
+                // 如果需要，在这里添加验证逻辑
+            }
         }
     }
 }
