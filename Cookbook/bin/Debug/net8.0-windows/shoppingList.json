@@ -1,34 +1,46 @@
 [
   {
-    "Name": "1 cup Water",
+    "Name": "20 beer",
     "IsSelected": true
   },
   {
-    "Name": "1 tsp Ginger",
+    "Name": "300g Carrots",
     "IsSelected": true
   },
   {
-    "Name": "1 tsp Soy Sauce",
+    "Name": "4 large Tomatoes",
     "IsSelected": true
   },
   {
-    "Name": "1 tsp Sugar",
+    "Name": "5 tblsp Tomato Puree",
     "IsSelected": true
   },
   {
-    "Name": "1/2 Egg",
+    "Name": "500g fish",
     "IsSelected": true
   },
   {
-    "Name": "1/4 cup Soy Sauce",
+    "Name": "500g Potatoes",
     "IsSelected": true
   },
   {
-    "Name": "1907.18g Beef",
+    "Name": "500g tomato",
     "IsSelected": true
   },
   {
-    "Name": "3 cloves Garlic",
+    "Name": "50g Gruy\u00E8re",
     "IsSelected": true
+  },
+  {
+    "Name": "6 Eggs",
+    "IsSelected": false
+  },
+  {
+    "Name": "75g Butter",
+    "IsSelected": true
+  },
+  {
+    "Name": "Dash Milk",
+    "IsSelected": false
   }
 ]
