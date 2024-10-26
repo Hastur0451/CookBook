@@ -198,18 +198,12 @@ C:\Users\zyx62\OneDrive\Desktop\CookBook03.1\obj\Debug\net8.0-windows\refint\Coo
 C:\Users\zyx62\OneDrive\Desktop\CookBook03.1\obj\Debug\net8.0-windows\CookBook.pdb
 C:\Users\zyx62\OneDrive\Desktop\CookBook03.1\obj\Debug\net8.0-windows\CookBook.genruntimeconfig.cache
 C:\Users\zyx62\OneDrive\Desktop\CookBook03.1\obj\Debug\net8.0-windows\ref\CookBook.dll
-D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\CookBook.csproj.AssemblyReference.cache
-D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Windows\App.baml
-D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Pages\CustomRecipePage.g.cs
-D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Pages\FavoriteButton.g.cs
-D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Pages\FavoriteRecipePage.g.cs
-D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Pages\SearchRecipePage.g.cs
-D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Pages\ShoppingListPage.g.cs
-D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Windows\App.g.cs
-D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Windows\MainWindow.g.cs
-D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
-D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\CookBook_MarkupCompile.cache
-D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\CookBook_MarkupCompile.lref
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\bin\Debug\net8.0-windows\NUnit3.TestAdapter.dll
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\bin\Debug\net8.0-windows\NUnit3.TestAdapter.pdb
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\bin\Debug\net8.0-windows\nunit.engine.dll
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\bin\Debug\net8.0-windows\nunit.engine.api.dll
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\bin\Debug\net8.0-windows\nunit.engine.core.dll
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\bin\Debug\net8.0-windows\testcentric.engine.metadata.dll
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\bin\Debug\net8.0-windows\CookBook.exe
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\bin\Debug\net8.0-windows\CookBook.dll.config
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\bin\Debug\net8.0-windows\CookBook.deps.json
@@ -230,6 +224,18 @@ D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\bin\Debug\ne
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\bin\Debug\net8.0-windows\Microsoft.Xaml.Behaviors.dll
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\CookBook.csproj.AssemblyReference.cache
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Windows\App.baml
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Pages\CustomRecipePage.g.cs
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Pages\FavoriteButton.g.cs
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Pages\FavoriteRecipePage.g.cs
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Pages\SearchRecipePage.g.cs
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Pages\ShoppingListPage.g.cs
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Windows\App.g.cs
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Windows\MainWindow.g.cs
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\CookBook_MarkupCompile.cache
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\CookBook_MarkupCompile.lref
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Pages\CustomRecipePage.baml
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Pages\FavoriteButton.baml
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Pages\FavoriteRecipePage.baml
@@ -248,9 +254,3 @@ D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\ne
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\CookBook.pdb
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\CookBook.genruntimeconfig.cache
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\ref\CookBook.dll
-D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\bin\Debug\net8.0-windows\NUnit3.TestAdapter.dll
-D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\bin\Debug\net8.0-windows\NUnit3.TestAdapter.pdb
-D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\bin\Debug\net8.0-windows\nunit.engine.dll
-D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\bin\Debug\net8.0-windows\nunit.engine.api.dll
-D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\bin\Debug\net8.0-windows\nunit.engine.core.dll
-D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\bin\Debug\net8.0-windows\testcentric.engine.metadata.dll
