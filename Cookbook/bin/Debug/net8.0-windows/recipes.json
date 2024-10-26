@@ -1,0 +1,30 @@
+[
+  {
+    "Id": "ae025598-5053-4a2d-b029-6838d87174e9",
+    "Name": "taco",
+    "Ingredients": [
+      {
+        "Name": "flour",
+        "Quantity": "500g"
+      },
+      {
+        "Name": "rice",
+        "Quantity": "200g"
+      }
+    ],
+    "CreatedDate": "2024-10-26T01:10:31.2460811+11:00",
+    "Notes": ""
+  },
+  {
+    "Id": "23bfe27d-0da3-4ad0-aa95-0274bb10d01a",
+    "Name": "rice",
+    "Ingredients": [
+      {
+        "Name": "rice",
+        "Quantity": "500g"
+      }
+    ],
+    "CreatedDate": "2024-10-26T01:12:46.0420154+11:00",
+    "Notes": ""
+  }
+]
