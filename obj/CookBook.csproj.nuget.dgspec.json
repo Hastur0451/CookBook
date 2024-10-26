@@ -76,6 +76,10 @@
             "Microsoft.Extensions.Primitives": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.6.0, )"
             }
           },
           "imports": [

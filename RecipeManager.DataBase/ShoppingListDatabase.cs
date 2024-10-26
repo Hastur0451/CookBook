@@ -17,13 +17,24 @@ namespace RecipeManager.DataBase
 
         public List<ShoppingListItem> LoadShoppingList()
         {
-            if (!File.Exists(_filePath))
+            try
+            {
+                if (!File.Exists(_filePath))
+                {
+                    return new List<ShoppingListItem>();
+                }
+
+                var json = File.ReadAllText(_filePath);
+                return JsonSerializer.Deserialize<List<ShoppingListItem>>(json) ?? new List<ShoppingListItem>();
+            }
+            catch (JsonException)
             {
                 return new List<ShoppingListItem>();
             }
-
-            var json = File.ReadAllText(_filePath);
-            return JsonSerializer.Deserialize<List<ShoppingListItem>>(json) ?? new List<ShoppingListItem>();
+            catch (Exception)
+            {
+                return new List<ShoppingListItem>();
+            }
         }
 
         public void SaveShoppingList(List<ShoppingListItem> shoppingList)

@@ -248,3 +248,9 @@ D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\ne
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\CookBook.pdb
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\CookBook.genruntimeconfig.cache
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\ref\CookBook.dll
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\bin\Debug\net8.0-windows\NUnit3.TestAdapter.dll
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\bin\Debug\net8.0-windows\NUnit3.TestAdapter.pdb
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\bin\Debug\net8.0-windows\nunit.engine.dll
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\bin\Debug\net8.0-windows\nunit.engine.api.dll
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\bin\Debug\net8.0-windows\nunit.engine.core.dll
+D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\bin\Debug\net8.0-windows\testcentric.engine.metadata.dll
