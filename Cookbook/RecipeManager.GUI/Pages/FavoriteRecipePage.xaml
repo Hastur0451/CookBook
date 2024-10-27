@@ -17,15 +17,10 @@
         <!-- Search Area -->
         <DockPanel Grid.Row="0" LastChildFill="False" Margin="0,0,0,10">
             <TextBox x:Name="txtSearch" 
-                     Width="300"
-                     DockPanel.Dock="Left"
-                     FontSize="14"
-                     Background="White"
-                     Foreground="{StaticResource TextPrimaryBrush}"
-                     BorderBrush="{StaticResource BorderBrush}"
-                     Padding="15,10"
-                     Margin="0,0,10,0"
-                     TextChanged="TxtSearch_TextChanged"/>
+             Width="300"
+             Style="{StaticResource BaseTextBoxStyle}"
+             DockPanel.Dock="Left"
+             TextChanged="TxtSearch_TextChanged"/>
         </DockPanel>
 
         <!-- Results Display Area -->
@@ -66,40 +61,25 @@
                         Visibility="Collapsed">
                     <DockPanel Margin="20">
                         <!-- Title -->
-<<<<<<<< HEAD:RecipeManager.GUI/Pages/SearchRecipePage.xaml
 						<DockPanel DockPanel.Dock="Top" Margin="0,0,0,20">
-							<models:FavoriteButton x:Name="favoriteButton"
+                            <models:FavoriteButton x:Name="favoriteButton"
 												  DockPanel.Dock="Right"
 												  Margin="10,0,0,0"
 												  VerticalAlignment="Center"
 												  FavoriteChanged="FavoriteButton_FavoriteChanged"/>
-							<TextBlock x:Name="recipeTitle"
+                            <TextBlock x:Name="recipeTitle"
 									  FontSize="28"
 									  FontWeight="Bold"
 									  Foreground="{StaticResource TextPrimaryBrush}"/>
-						</DockPanel>
-========
-                        <DockPanel DockPanel.Dock="Top" Margin="0,0,0,20">
-                            <models:FavoriteButton x:Name="favoriteButton"
-                                                 DockPanel.Dock="Right"
-                                                 Margin="10,0,0,0"
-                                                 VerticalAlignment="Center"
-                                                 FavoriteChanged="FavoriteButton_FavoriteChanged"/>
-                            <TextBlock x:Name="recipeTitle"
-                                     FontSize="28"
-                                     FontWeight="Bold"
-                                     Foreground="{StaticResource TextPrimaryBrush}"/>
-                        </DockPanel>
-
->>>>>>>> a295bba56e7536ac999cf3e70c5173da139788eb:Cookbook/RecipeManager.GUI/Pages/FavoriteRecipePage.xaml
-                        <!-- Save Button -->
+                    </DockPanel>
+                    <!-- Save Button -->
                         <Button x:Name="btnSaveList"
-                                DockPanel.Dock="Bottom"
-                                Content="Save Shopping List"
-                                Click="BtnSaveList_Click"
-                                HorizontalAlignment="Right"
-                                Margin="0,10,0,0"/>
-
+                            Style="{StaticResource BaseButtonStyle}"
+                            DockPanel.Dock="Bottom"
+                            Content="Add to Shopping List"
+                            Click="BtnSaveList_Click"
+                            HorizontalAlignment="Right"
+                            Margin="0,10,0,0"/>
                         <!-- Content Area -->
                         <StackPanel>
                             <!-- Ingredients List -->

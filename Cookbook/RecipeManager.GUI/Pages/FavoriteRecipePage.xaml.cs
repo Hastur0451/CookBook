@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using CookBook.RecipeManager.GUI.Models;
+using CookBook.RecipeManager.GUI.Windows;
 using RecipeManager.BusinessLogic;
 
 namespace CookBook.RecipeManager.GUI.Pages
@@ -67,29 +69,33 @@ namespace CookBook.RecipeManager.GUI.Pages
             {
                 try
                 {
-                    // Fetch recipe details for the selected favorite recipe
                     var recipe = await _recipeLogic.GetRecipeDetails(selectedResult.Id);
 
-                    // Display recipe details
                     recipeDetailPanel.Visibility = Visibility.Visible;
                     recipeTitle.Text = recipe.Name;
 
-                    // Set favorite button state
                     favoriteButton.RecipeId = selectedResult.Id;
                     favoriteButton.IsFavorite = true;
 
-                    // Populate ingredients list
-                    ingredientsList.ItemsSource = _recipeLogic.GetFormattedIngredients(recipe);
+                    ingredientsList.ItemsSource = _recipeLogic.GetFormattedIngredients(recipe)
+                        .Select(ingredient => new CheckBox
+                        {
+                            Content = $"{ingredient.Measure} {ingredient.Ingredient}",
+                            IsChecked = false
+                        });
 
-                    // Display instructions or placeholder if none
                     recipeInstructions.Text = recipe.Instructions;
                     if (string.IsNullOrWhiteSpace(recipe.Instructions))
                     {
                         recipeInstructions.Text = "No detailed instructions available.";
                     }
 
-                    // Collapse instructions section initially
                     instructionsExpander.IsExpanded = false;
+
+                    if (recipeDetailPanel.Parent is ScrollViewer scrollViewer)
+                    {
+                        scrollViewer.ScrollToTop();
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -98,7 +104,6 @@ namespace CookBook.RecipeManager.GUI.Pages
             }
             else
             {
-                // Hide recipe details panel if no selection
                 recipeDetailPanel.Visibility = Visibility.Collapsed;
             }
         }
@@ -118,7 +123,23 @@ namespace CookBook.RecipeManager.GUI.Pages
         // Placeholder for save list functionality
         private void BtnSaveList_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Shopping list save feature will be available in a future update.", "Notice");
+            var checkedIngredients = ingredientsList.Items
+                .Cast<object>()
+                .Where(item => item is CheckBox checkBox && checkBox.IsChecked == true)
+                .Select(item => ((CheckBox)item).Content.ToString())
+                .ToList();
+
+            if (checkedIngredients.Any())
+            {
+                var mainWindow = (MainWindow)Application.Current.MainWindow;
+                var shoppingListPage = mainWindow.GetShoppingListPage();
+                shoppingListPage.AddIngredientsToShoppingList(checkedIngredients);
+                MessageBox.Show("Selected ingredients added to the shopping list!", "Success");
+            }
+            else
+            {
+                MessageBox.Show("No ingredients selected. Please check the ingredients you want to add to the shopping list.", "Information");
+            }
         }
     }
 }
