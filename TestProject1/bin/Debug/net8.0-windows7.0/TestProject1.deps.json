@@ -492,10 +492,7 @@
           "NUnit3TestAdapter": "4.6.0"
         },
         "runtime": {
-          "CookBook.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "CookBook.dll": {}
         }
       }
     }

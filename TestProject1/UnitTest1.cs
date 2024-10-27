@@ -21,19 +21,17 @@ namespace RecipeManager.Tests
             _testFilePath = Path.Combine(Path.GetTempPath(), "test_shopping_list.json");
             _database = new ShoppingListDatabase(_testFilePath);
 
-            // Prepare test data matching the actual JSON structure
+            // Prepare test data with updated structure
             _testShoppingList = new List<ShoppingListItem>
             {
                 new ShoppingListItem
                 {
                     Name = "1300g Potatoes",
-                    Quantity = "1",
                     IsSelected = true
                 },
                 new ShoppingListItem
                 {
                     Name = "500g Carrots",
-                    Quantity = "2",
                     IsSelected = false
                 }
             };
@@ -42,7 +40,6 @@ namespace RecipeManager.Tests
         [TearDown]
         public void Cleanup()
         {
-            // Clean up test file after each test
             if (File.Exists(_testFilePath))
             {
                 File.Delete(_testFilePath);
@@ -77,7 +74,6 @@ namespace RecipeManager.Tests
             Assert.Multiple(() =>
             {
                 Assert.That(firstItem.Name, Is.EqualTo("1300g Potatoes"));
-                Assert.That(firstItem.Quantity, Is.EqualTo("1"));
                 Assert.That(firstItem.IsSelected, Is.True);
             });
         }
@@ -91,7 +87,6 @@ namespace RecipeManager.Tests
                 new ShoppingListItem
                 {
                     Name = "1300g Potatoes",
-                    Quantity = "1",
                     IsSelected = true
                 }
             };
@@ -102,7 +97,7 @@ namespace RecipeManager.Tests
             // Assert
             Assert.That(File.Exists(_testFilePath));
             var fileContent = File.ReadAllText(_testFilePath);
-            var expectedJson = "[\r\n  {\r\n    \"Name\": \"1300g Potatoes\",\r\n    \"Quantity\": \"1\",\r\n    \"IsSelected\": true\r\n  }\r\n]";
+            var expectedJson = "[\r\n  {\r\n    \"Name\": \"1300g Potatoes\",\r\n    \"IsSelected\": true\r\n  }\r\n]";
             Assert.That(fileContent, Is.EqualTo(expectedJson));
         }
 
@@ -117,7 +112,6 @@ namespace RecipeManager.Tests
                 new ShoppingListItem
                 {
                     Name = "2000g Rice",
-                    Quantity = "1",
                     IsSelected = false
                 }
             };
@@ -131,7 +125,6 @@ namespace RecipeManager.Tests
             Assert.Multiple(() =>
             {
                 Assert.That(loadedList[0].Name, Is.EqualTo("2000g Rice"));
-                Assert.That(loadedList[0].Quantity, Is.EqualTo("1"));
                 Assert.That(loadedList[0].IsSelected, Is.False);
             });
         }
