@@ -14,5 +14,25 @@
     ],
     "CreatedDate": "2024-10-27T00:48:43.8510141+11:00",
     "Notes": ""
+  },
+  {
+    "Id": "59b43caa-9fbb-4ab0-a0bb-93a19594343a",
+    "Name": "shaweima",
+    "Ingredients": [
+      {
+        "Name": "youga",
+        "Quantity": "500g"
+      },
+      {
+        "Name": "beef",
+        "Quantity": "500g"
+      },
+      {
+        "Name": "beef",
+        "Quantity": "5550g"
+      }
+    ],
+    "CreatedDate": "2024-10-27T17:18:34.2803987+11:00",
+    "Notes": ""
   }
 ]

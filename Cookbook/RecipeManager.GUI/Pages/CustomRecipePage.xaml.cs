@@ -5,7 +5,7 @@ using System.Windows;
 using System.Windows.Controls;
 using CookBook.RecipeManager.GUI.Models;
 using RecipeManager.DataBase;
-using CookBook.RecipeManager.GUI.Windows; // Add this line
+using CookBook.RecipeManager.GUI.Windows;
 
 namespace CookBook.RecipeManager.GUI.Pages
 {
@@ -20,6 +20,7 @@ namespace CookBook.RecipeManager.GUI.Pages
             InitializeComponent();
             _recipeDatabase = new RecipeDatabase("recipes.json");
             LoadRecipes();
+            HideDetailsContent();
         }
 
         private void LoadRecipes()
@@ -37,10 +38,41 @@ namespace CookBook.RecipeManager.GUI.Pages
             recipeList.ItemsSource = filteredRecipes;
         }
 
+        private void ShowDetailsContent()
+        {
+            var mainGrid = recipeDetailsPanel.Child as Grid;
+            if (mainGrid != null)
+            {
+                foreach (var child in mainGrid.Children)
+                {
+                    if (child is FrameworkElement element)
+                    {
+                        element.Visibility = Visibility.Visible;
+                    }
+                }
+            }
+        }
+
+        private void HideDetailsContent()
+        {
+            var mainGrid = recipeDetailsPanel.Child as Grid;
+            if (mainGrid != null)
+            {
+                foreach (var child in mainGrid.Children)
+                {
+                    if (child is FrameworkElement element)
+                    {
+                        element.Visibility = Visibility.Collapsed;
+                    }
+                }
+            }
+        }
+
         private void BtnAddNewRecipe_Click(object sender, RoutedEventArgs e)
         {
             _currentRecipe = new CustomRecipe();
             ClearInputs();
+            ShowDetailsContent();
             _currentRecipe.Ingredients = new ObservableCollection<Ingredient>();
             ingredientsList.ItemsSource = _currentRecipe.Ingredients;
         }
@@ -52,6 +84,7 @@ namespace CookBook.RecipeManager.GUI.Pages
                 _currentRecipe = _recipes.FirstOrDefault(r => r.Id == recipeId);
                 if (_currentRecipe != null)
                 {
+                    ShowDetailsContent();
                     txtRecipeName.Text = _currentRecipe.Name;
                     ingredientsList.ItemsSource = _currentRecipe.Ingredients;
                 }
@@ -124,6 +157,7 @@ namespace CookBook.RecipeManager.GUI.Pages
             _recipeDatabase.SaveRecipes(_recipes.ToList());
             LoadRecipes();
             ClearInputs();
+            HideDetailsContent();
             _currentRecipe = null;
         }
 
@@ -155,6 +189,13 @@ namespace CookBook.RecipeManager.GUI.Pages
         {
             ingredientsList.ItemsSource = null;
             ingredientsList.ItemsSource = _currentRecipe?.Ingredients;
+        }
+
+        private void CancelEdit_Click(object sender, RoutedEventArgs e)
+        {
+            ClearInputs();
+            HideDetailsContent();
+            _currentRecipe = null;
         }
     }
 }
