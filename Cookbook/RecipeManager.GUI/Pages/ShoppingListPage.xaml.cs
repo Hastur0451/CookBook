@@ -15,8 +15,13 @@ namespace CookBook.RecipeManager.GUI.Pages
 {
     public partial class ShoppingListPage : Page
     {
+        // Observable collection to hold shopping list items
         private ObservableCollection<ShoppingListItem> _shoppingItems;
+
+        // Database object for loading and saving shopping list
         private readonly ShoppingListDatabase _shoppingListDatabase;
+
+        // Merger utility for combining duplicate items
         private readonly ShoppingListMerger _merger = new ShoppingListMerger();
 
         public ShoppingListPage()
@@ -26,6 +31,7 @@ namespace CookBook.RecipeManager.GUI.Pages
             LoadShoppingList();
         }
 
+        // Loads shopping list items from the database
         private void LoadShoppingList()
         {
             var loadedItems = _shoppingListDatabase.LoadShoppingList();
@@ -33,11 +39,13 @@ namespace CookBook.RecipeManager.GUI.Pages
             shoppingList.ItemsSource = _shoppingItems;
         }
 
+        // Saves the current shopping list to the database
         private void SaveShoppingList()
         {
             _shoppingListDatabase.SaveShoppingList(_shoppingItems.ToList());
         }
 
+        // Adds a single ingredient to the shopping list
         public void AddToShoppingList(string ingredient)
         {
             var existingItem = _shoppingItems.FirstOrDefault(item =>
@@ -59,6 +67,7 @@ namespace CookBook.RecipeManager.GUI.Pages
             SaveShoppingList();
         }
 
+        // Adds multiple ingredients to the shopping list
         public void AddIngredientsToShoppingList(List<string> ingredients)
         {
             foreach (var ingredient in ingredients)
@@ -69,6 +78,7 @@ namespace CookBook.RecipeManager.GUI.Pages
             SaveShoppingList();
         }
 
+        // Refreshes the shopping list UI to reflect updates
         private void RefreshShoppingList()
         {
             var temp = shoppingList.ItemsSource;
@@ -76,6 +86,7 @@ namespace CookBook.RecipeManager.GUI.Pages
             shoppingList.ItemsSource = temp;
         }
 
+        // Opens the popup for adding a new item
         private void BtnAddItem_Click(object sender, RoutedEventArgs e)
         {
             txtNewItemName.Text = "";
@@ -83,6 +94,7 @@ namespace CookBook.RecipeManager.GUI.Pages
             addItemPopup.IsOpen = true;
         }
 
+        // Confirms the addition of a new item to the shopping list
         private void BtnConfirmAdd_Click(object sender, RoutedEventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(txtNewItemName.Text))
@@ -97,11 +109,13 @@ namespace CookBook.RecipeManager.GUI.Pages
             }
         }
 
+        // Cancels the addition of a new item
         private void BtnCancelAdd_Click(object sender, RoutedEventArgs e)
         {
             addItemPopup.IsOpen = false;
         }
 
+        // Deletes a selected item from the shopping list
         private void BtnDeleteItem_Click(object sender, RoutedEventArgs e)
         {
             if (sender is Button button && button.Tag is ShoppingListItem item)
@@ -111,6 +125,7 @@ namespace CookBook.RecipeManager.GUI.Pages
             }
         }
 
+        // Copies the selected shopping list items to the clipboard
         private void BtnCopyToClipboard_Click(object sender, RoutedEventArgs e)
         {
             var selectedItems = _shoppingItems.Where(item => item.IsSelected).ToList();
@@ -138,6 +153,7 @@ namespace CookBook.RecipeManager.GUI.Pages
             }
         }
 
+        // Saves the selected shopping list items to a text file
         private void BtnSaveAsText_Click(object sender, RoutedEventArgs e)
         {
             var selectedItems = _shoppingItems.Where(item => item.IsSelected).ToList();
@@ -174,6 +190,7 @@ namespace CookBook.RecipeManager.GUI.Pages
             }
         }
 
+        // Merges duplicate items in the shopping list
         private void BtnMergeItems_Click(object sender, RoutedEventArgs e)
         {
             try

@@ -122,7 +122,7 @@ namespace CookBook.RecipeManager.GUI.Windows
         {
             if (navigationList.SelectedItem == null) return;
 
-            // 当选择导航项时，确保隐藏欢迎页
+            // Ensure that the welcome page is hidden when the navigation item is selected
             welcomePage.Visibility = Visibility.Collapsed;
             recipeManagementPage.Visibility = Visibility.Collapsed;
             customRecipePage.Visibility = Visibility.Collapsed;
@@ -180,19 +180,19 @@ namespace CookBook.RecipeManager.GUI.Windows
 
         private void AppTitle_Click(object sender, RoutedEventArgs e)
         {
-            // 清除导航列表的选择
+            // Clearing the navigation list selection
             navigationList.SelectedItem = null;
 
-            // 隐藏所有页面
+            // Hide all pages
             recipeManagementPage.Visibility = Visibility.Collapsed;
             customRecipePage.Visibility = Visibility.Collapsed;
             favoriteRecipePage.Visibility = Visibility.Collapsed;
             shoppingListPage.Visibility = Visibility.Collapsed;
 
-            // 显示欢迎页
+            // Show Welcome Page
             welcomePage.Visibility = Visibility.Visible;
 
-            // 清空欢迎页搜索框
+            // Empty the search box on the welcome page
             welcomeSearchBox.Text = string.Empty;
         }
 

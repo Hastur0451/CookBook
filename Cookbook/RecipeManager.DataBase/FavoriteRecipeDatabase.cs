@@ -8,30 +8,30 @@ namespace RecipeManager.DataBase
 {
     public class FavoriteRecipeDatabase
     {
-        private readonly string _filePath;
+        private readonly string _filePath; // File path for storing favorite recipes
 
         public FavoriteRecipeDatabase(string filePath)
         {
             _filePath = filePath;
         }
 
+        // Loads favorite recipes, returns empty if file is missing
         public List<RecipeSearchResult> LoadFavoriteRecipes()
         {
-            if (!File.Exists(_filePath))
-            {
-                return new List<RecipeSearchResult>();
-            }
+            if (!File.Exists(_filePath)) return new List<RecipeSearchResult>();
 
             var json = File.ReadAllText(_filePath);
             return JsonSerializer.Deserialize<List<RecipeSearchResult>>(json) ?? new List<RecipeSearchResult>();
         }
 
+        // Saves the list of favorite recipes to the file
         public void SaveFavoriteRecipes(List<RecipeSearchResult> favoriteRecipes)
         {
             var json = JsonSerializer.Serialize(favoriteRecipes, new JsonSerializerOptions { WriteIndented = true });
             File.WriteAllText(_filePath, json);
         }
 
+        // Adds a recipe to favorites if it's not already there
         public void AddFavoriteRecipe(RecipeSearchResult recipe)
         {
             var favoriteRecipes = LoadFavoriteRecipes();
@@ -42,6 +42,7 @@ namespace RecipeManager.DataBase
             }
         }
 
+        // Removes a recipe from favorites by ID
         public void RemoveFavoriteRecipe(string recipeId)
         {
             var favoriteRecipes = LoadFavoriteRecipes();
@@ -49,6 +50,7 @@ namespace RecipeManager.DataBase
             SaveFavoriteRecipes(favoriteRecipes);
         }
 
+        // Checks if a recipe is a favorite by ID
         public bool IsFavoriteRecipe(string recipeId)
         {
             var favoriteRecipes = LoadFavoriteRecipes();

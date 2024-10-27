@@ -11,8 +11,13 @@ namespace CookBook.RecipeManager.GUI.Pages
 {
     public partial class CustomRecipePage : UserControl
     {
+        // Collection to store recipes
         private ObservableCollection<CustomRecipe> _recipes;
+
+        // Currently selected recipe for editing or viewing
         private CustomRecipe? _currentRecipe;
+
+        // Database for saving and loading recipes
         private readonly RecipeDatabase _recipeDatabase;
 
         public CustomRecipePage()
@@ -23,6 +28,7 @@ namespace CookBook.RecipeManager.GUI.Pages
             HideDetailsContent();
         }
 
+        // Loads recipes from the database and updates UI
         private void LoadRecipes()
         {
             var loadedRecipes = _recipeDatabase.LoadRecipes();
@@ -30,6 +36,7 @@ namespace CookBook.RecipeManager.GUI.Pages
             recipeList.ItemsSource = _recipes;
         }
 
+        // Filters recipes based on search term
         private void BtnCustomSearch_Click(object sender, RoutedEventArgs e)
         {
             var searchTerm = customRecipeSearch.Text.ToLower();
@@ -38,6 +45,7 @@ namespace CookBook.RecipeManager.GUI.Pages
             recipeList.ItemsSource = filteredRecipes;
         }
 
+        // Shows the details content area
         private void ShowDetailsContent()
         {
             var mainGrid = recipeDetailsPanel.Child as Grid;
@@ -53,6 +61,7 @@ namespace CookBook.RecipeManager.GUI.Pages
             }
         }
 
+        // Hides the details content area
         private void HideDetailsContent()
         {
             var mainGrid = recipeDetailsPanel.Child as Grid;
@@ -68,6 +77,7 @@ namespace CookBook.RecipeManager.GUI.Pages
             }
         }
 
+        // Initializes a new recipe for adding
         private void BtnAddNewRecipe_Click(object sender, RoutedEventArgs e)
         {
             _currentRecipe = new CustomRecipe();
@@ -77,6 +87,7 @@ namespace CookBook.RecipeManager.GUI.Pages
             ingredientsList.ItemsSource = _currentRecipe.Ingredients;
         }
 
+        // Edits the selected recipe
         private void EditRecipe_Click(object sender, RoutedEventArgs e)
         {
             if (sender is Button button && button.Tag is string recipeId)
@@ -91,6 +102,7 @@ namespace CookBook.RecipeManager.GUI.Pages
             }
         }
 
+        // Deletes the selected recipe
         private void DeleteRecipe_Click(object sender, RoutedEventArgs e)
         {
             if (sender is Button button && button.Tag is string recipeId)
@@ -114,6 +126,7 @@ namespace CookBook.RecipeManager.GUI.Pages
             }
         }
 
+        // Adds a new ingredient to the current recipe
         private void AddIngredient_Click(object sender, RoutedEventArgs e)
         {
             if (_currentRecipe != null)
@@ -123,6 +136,7 @@ namespace CookBook.RecipeManager.GUI.Pages
             }
         }
 
+        // Removes an ingredient from the current recipe
         private void RemoveIngredient_Click(object sender, RoutedEventArgs e)
         {
             if (_currentRecipe != null && sender is Button button && button.DataContext is Ingredient ingredient)
@@ -132,6 +146,7 @@ namespace CookBook.RecipeManager.GUI.Pages
             }
         }
 
+        // Saves the current recipe to the database
         private void SaveRecipe_Click(object sender, RoutedEventArgs e)
         {
             if (_currentRecipe == null) return;
@@ -144,7 +159,7 @@ namespace CookBook.RecipeManager.GUI.Pages
                 return;
             }
 
-            // Remove empty ingredients
+            // Remove any empty ingredients
             _currentRecipe.Ingredients = new ObservableCollection<Ingredient>(
                 _currentRecipe.Ingredients.Where(i => !string.IsNullOrWhiteSpace(i.Name))
             );
@@ -161,6 +176,7 @@ namespace CookBook.RecipeManager.GUI.Pages
             _currentRecipe = null;
         }
 
+        // Adds ingredients of the current recipe to the shopping list
         private void AddToShoppingList_Click(object sender, RoutedEventArgs e)
         {
             if (_currentRecipe != null && _currentRecipe.Ingredients.Any())
@@ -179,18 +195,21 @@ namespace CookBook.RecipeManager.GUI.Pages
             }
         }
 
+        // Clears input fields for recipe details
         private void ClearInputs()
         {
             txtRecipeName.Text = string.Empty;
             ingredientsList.ItemsSource = null;
         }
 
+        // Refreshes the ingredients list UI
         private void RefreshIngredientsList()
         {
             ingredientsList.ItemsSource = null;
             ingredientsList.ItemsSource = _currentRecipe?.Ingredients;
         }
 
+        // Cancels editing the current recipe
         private void CancelEdit_Click(object sender, RoutedEventArgs e)
         {
             ClearInputs();
