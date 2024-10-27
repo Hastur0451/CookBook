@@ -18,7 +18,10 @@ namespace CookBook.RecipeManager.GUI.Pages
         private ObservableCollection<ShoppingListItem> _shoppingItems;
         private readonly ShoppingListDatabase _shoppingListDatabase;
         private readonly ShoppingListMerger _merger = new ShoppingListMerger();
+<<<<<<< HEAD
 
+=======
+>>>>>>> Yao
 
         public ShoppingListPage()
         {
@@ -53,7 +56,6 @@ namespace CookBook.RecipeManager.GUI.Pages
                 _shoppingItems.Add(new ShoppingListItem
                 {
                     Name = ingredient,
-                    Quantity = "1",
                     IsSelected = true
                 });
             }
@@ -73,7 +75,6 @@ namespace CookBook.RecipeManager.GUI.Pages
 
         private void RefreshShoppingList()
         {
-            // Force the UI to refresh
             var temp = shoppingList.ItemsSource;
             shoppingList.ItemsSource = null;
             shoppingList.ItemsSource = temp;
@@ -82,7 +83,7 @@ namespace CookBook.RecipeManager.GUI.Pages
         private void BtnAddItem_Click(object sender, RoutedEventArgs e)
         {
             txtNewItemName.Text = "";
-            txtNewItemQuantity.Text = "";
+            txtNewItemQuantity.Text = "1";
             addItemPopup.IsOpen = true;
         }
 
@@ -90,14 +91,17 @@ namespace CookBook.RecipeManager.GUI.Pages
         {
             if (!string.IsNullOrWhiteSpace(txtNewItemName.Text))
             {
-                _shoppingItems.Add(new ShoppingListItem
+                var ingredient = txtNewItemName.Text.Trim();
+                if (!string.IsNullOrWhiteSpace(txtNewItemQuantity.Text))
                 {
-                    Name = txtNewItemName.Text.Trim(),
-                    Quantity = txtNewItemQuantity.Text.Trim(),
-                    IsSelected = true
-                });
+                    ingredient = $"{txtNewItemQuantity.Text.Trim()} {ingredient}";
+                }
+                AddToShoppingList(ingredient);
                 addItemPopup.IsOpen = false;
+<<<<<<< HEAD
                 SaveShoppingList();
+=======
+>>>>>>> Yao
             }
         }
 
@@ -112,6 +116,7 @@ namespace CookBook.RecipeManager.GUI.Pages
             {
                 _shoppingItems.Remove(item);
                 SaveShoppingList();
+<<<<<<< HEAD
             }
         }
 
@@ -120,6 +125,8 @@ namespace CookBook.RecipeManager.GUI.Pages
             if (sender is TextBox textBox)
             {
                 textBox.SelectAll();
+=======
+>>>>>>> Yao
             }
         }
 
@@ -131,11 +138,18 @@ namespace CookBook.RecipeManager.GUI.Pages
                 string shoppingList = "Shopping List:\n\n";
                 foreach (var item in selectedItems)
                 {
-                    shoppingList += $"- {item.Name}: {item.Quantity}\n";
+                    shoppingList += $"- {item.Name}\n";
                 }
 
-                Clipboard.SetText(shoppingList);
-                MessageBox.Show("Shopping list copied to clipboard!");
+                try
+                {
+                    Clipboard.SetText(shoppingList);
+                    MessageBox.Show("Shopping list copied to clipboard!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error copying to clipboard: {ex.Message}");
+                }
             }
             else
             {
@@ -166,7 +180,7 @@ namespace CookBook.RecipeManager.GUI.Pages
                     string shoppingList = "Shopping List:\n\n";
                     foreach (var item in selectedItems)
                     {
-                        shoppingList += $"- {item.Name}: {item.Quantity}\n";
+                        shoppingList += $"- {item.Name}\n";
                     }
 
                     File.WriteAllText(saveFileDialog.FileName, shoppingList);
@@ -178,6 +192,7 @@ namespace CookBook.RecipeManager.GUI.Pages
                 }
             }
         }
+<<<<<<< HEAD
 
         private void BtnMergeItems_Click(object sender, RoutedEventArgs e)
         {
@@ -208,11 +223,35 @@ namespace CookBook.RecipeManager.GUI.Pages
                     MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+=======
+>>>>>>> Yao
 
-        // Add this method to save changes when quantity is updated
-        private void Quantity_LostFocus(object sender, RoutedEventArgs e)
+        private void BtnMergeItems_Click(object sender, RoutedEventArgs e)
         {
-            SaveShoppingList();
+            try
+            {
+                var currentItems = _shoppingItems.ToList();
+                var mergedItems = _merger.MergeItems(currentItems);
+
+                _shoppingItems.Clear();
+                foreach (var item in mergedItems)
+                {
+                    _shoppingItems.Add(item);
+                }
+
+                SaveShoppingList();
+                MessageBox.Show("Shopping list items merged successfully!", "Success",
+                    MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error merging items: {ex.Message}", "Error",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> Yao

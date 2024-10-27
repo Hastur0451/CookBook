@@ -66,6 +66,19 @@
                         Visibility="Collapsed">
                     <DockPanel Margin="20">
                         <!-- Title -->
+<<<<<<<< HEAD:RecipeManager.GUI/Pages/SearchRecipePage.xaml
+						<DockPanel DockPanel.Dock="Top" Margin="0,0,0,20">
+							<models:FavoriteButton x:Name="favoriteButton"
+												  DockPanel.Dock="Right"
+												  Margin="10,0,0,0"
+												  VerticalAlignment="Center"
+												  FavoriteChanged="FavoriteButton_FavoriteChanged"/>
+							<TextBlock x:Name="recipeTitle"
+									  FontSize="28"
+									  FontWeight="Bold"
+									  Foreground="{StaticResource TextPrimaryBrush}"/>
+						</DockPanel>
+========
                         <DockPanel DockPanel.Dock="Top" Margin="0,0,0,20">
                             <models:FavoriteButton x:Name="favoriteButton"
                                                  DockPanel.Dock="Right"
@@ -78,6 +91,7 @@
                                      Foreground="{StaticResource TextPrimaryBrush}"/>
                         </DockPanel>
 
+>>>>>>>> a295bba56e7536ac999cf3e70c5173da139788eb:Cookbook/RecipeManager.GUI/Pages/FavoriteRecipePage.xaml
                         <!-- Save Button -->
                         <Button x:Name="btnSaveList"
                                 DockPanel.Dock="Bottom"

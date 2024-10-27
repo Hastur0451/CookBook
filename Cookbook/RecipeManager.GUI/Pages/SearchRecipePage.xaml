@@ -17,20 +17,17 @@
         <!-- Search Area -->
         <DockPanel Grid.Row="0" LastChildFill="False" Margin="0,0,0,10">
             <TextBox x:Name="txtSearch" 
-                     Width="300"
-                     DockPanel.Dock="Left"
-                     FontSize="14"
-                     Background="White"
-                     Foreground="{StaticResource TextPrimaryBrush}"
-                     BorderBrush="{StaticResource BorderBrush}"
-                     Padding="15,10"
-                     Margin="0,0,10,0"/>
+             Width="300"
+             DockPanel.Dock="Left"
+             Style="{StaticResource BaseTextBoxStyle}"
+             Margin="0,0,10,0"/>
 
             <Button x:Name="btnSearch" 
-                    DockPanel.Dock="Left"
-                    Content="Search"
-                    Width="80"
-                    Click="BtnSearch_Click"/>
+            Style="{StaticResource BaseButtonStyle}"
+            DockPanel.Dock="Left"
+            Content="Search"
+            Width="80"
+            Click="BtnSearch_Click"/>
         </DockPanel>
 
         <!-- Results Display Area -->
@@ -83,6 +80,7 @@
 									  Foreground="{StaticResource TextPrimaryBrush}"/>
 						</DockPanel>
                         <!-- Save Button -->
+<<<<<<< HEAD
 						<Button x:Name="btnSearch"
                                     DockPanel.Dock="Left"
                                     Content="Search"
@@ -91,6 +89,15 @@
                                     Foreground="White"
                                     FontWeight="Bold"
                                     Background="Purple"/>
+=======
+                        <Button x:Name="btnSaveList"
+        Style="{StaticResource SecondaryButtonStyle}"
+        DockPanel.Dock="Bottom"
+        Content="Save Shopping List"
+        Click="BtnSaveList_Click"
+        HorizontalAlignment="Right"
+        Margin="0,10,0,0"/>
+>>>>>>> Yao
 
                         <!-- Content Area -->
                         <StackPanel>
@@ -102,13 +109,7 @@
                                      Margin="0,0,0,10"/>
 
                             <ItemsControl x:Name="ingredientsList" 
-                                        Margin="0,0,0,20">
-                                <ItemsControl.ItemTemplate>
-                                    <DataTemplate>
-                                        <CheckBox Content="{Binding}"
-                                                Margin="0,4"/>
-                                    </DataTemplate>
-                                </ItemsControl.ItemTemplate>
+              Margin="0,0,0,20">
                             </ItemsControl>
 
                             <!-- Cooking Instructions -->

@@ -1,30 +1,23 @@
 ﻿using System.ComponentModel;
+using System.Text.RegularExpressions;
 
 namespace CookBook.RecipeManager.GUI.Models
 {
     public class ShoppingListItem : INotifyPropertyChanged
     {
         private string _name;
-        private string _quantity;
-        private bool _isSelected;
+        private bool _isSelected = true;
 
         public string Name
         {
             get => _name;
             set
             {
-                _name = value;
-                OnPropertyChanged(nameof(Name));
-            }
-        }
-
-        public string Quantity
-        {
-            get => _quantity;
-            set
-            {
-                _quantity = value;
-                OnPropertyChanged(nameof(Quantity));
+                if (_name != value)
+                {
+                    _name = value;
+                    OnPropertyChanged(nameof(Name));
+                }
             }
         }
 
@@ -33,8 +26,11 @@ namespace CookBook.RecipeManager.GUI.Models
             get => _isSelected;
             set
             {
-                _isSelected = value;
-                OnPropertyChanged(nameof(IsSelected));
+                if (_isSelected != value)
+                {
+                    _isSelected = value;
+                    OnPropertyChanged(nameof(IsSelected));
+                }
             }
         }
 
@@ -43,6 +39,16 @@ namespace CookBook.RecipeManager.GUI.Models
         protected virtual void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        public ShoppingListItem()
+        {
+        }
+
+        public ShoppingListItem(string ingredient)
+        {
+            Name = ingredient;
+            IsSelected = true;
         }
     }
 }

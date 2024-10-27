@@ -21,19 +21,29 @@ namespace RecipeManager.Tests
             _testFilePath = Path.Combine(Path.GetTempPath(), "test_shopping_list.json");
             _database = new ShoppingListDatabase(_testFilePath);
 
+<<<<<<< HEAD
             // Prepare test data matching the actual JSON structure
+=======
+            // Prepare test data with updated structure
+>>>>>>> Yao
             _testShoppingList = new List<ShoppingListItem>
             {
                 new ShoppingListItem
                 {
                     Name = "1300g Potatoes",
+<<<<<<< HEAD
                     Quantity = "1",
+=======
+>>>>>>> Yao
                     IsSelected = true
                 },
                 new ShoppingListItem
                 {
                     Name = "500g Carrots",
+<<<<<<< HEAD
                     Quantity = "2",
+=======
+>>>>>>> Yao
                     IsSelected = false
                 }
             };
@@ -42,7 +52,10 @@ namespace RecipeManager.Tests
         [TearDown]
         public void Cleanup()
         {
+<<<<<<< HEAD
             // Clean up test file after each test
+=======
+>>>>>>> Yao
             if (File.Exists(_testFilePath))
             {
                 File.Delete(_testFilePath);
@@ -77,7 +90,10 @@ namespace RecipeManager.Tests
             Assert.Multiple(() =>
             {
                 Assert.That(firstItem.Name, Is.EqualTo("1300g Potatoes"));
+<<<<<<< HEAD
                 Assert.That(firstItem.Quantity, Is.EqualTo("1"));
+=======
+>>>>>>> Yao
                 Assert.That(firstItem.IsSelected, Is.True);
             });
         }
@@ -91,7 +107,10 @@ namespace RecipeManager.Tests
                 new ShoppingListItem
                 {
                     Name = "1300g Potatoes",
+<<<<<<< HEAD
                     Quantity = "1",
+=======
+>>>>>>> Yao
                     IsSelected = true
                 }
             };
@@ -102,7 +121,11 @@ namespace RecipeManager.Tests
             // Assert
             Assert.That(File.Exists(_testFilePath));
             var fileContent = File.ReadAllText(_testFilePath);
+<<<<<<< HEAD
             var expectedJson = "[\r\n  {\r\n    \"Name\": \"1300g Potatoes\",\r\n    \"Quantity\": \"1\",\r\n    \"IsSelected\": true\r\n  }\r\n]";
+=======
+            var expectedJson = "[\r\n  {\r\n    \"Name\": \"1300g Potatoes\",\r\n    \"IsSelected\": true\r\n  }\r\n]";
+>>>>>>> Yao
             Assert.That(fileContent, Is.EqualTo(expectedJson));
         }
 
@@ -117,7 +140,10 @@ namespace RecipeManager.Tests
                 new ShoppingListItem
                 {
                     Name = "2000g Rice",
+<<<<<<< HEAD
                     Quantity = "1",
+=======
+>>>>>>> Yao
                     IsSelected = false
                 }
             };
@@ -131,7 +157,10 @@ namespace RecipeManager.Tests
             Assert.Multiple(() =>
             {
                 Assert.That(loadedList[0].Name, Is.EqualTo("2000g Rice"));
+<<<<<<< HEAD
                 Assert.That(loadedList[0].Quantity, Is.EqualTo("1"));
+=======
+>>>>>>> Yao
                 Assert.That(loadedList[0].IsSelected, Is.False);
             });
         }

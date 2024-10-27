@@ -70,7 +70,10 @@ namespace RecipeManager.BusinessLogic
                 result.Add(new ShoppingListItem
                 {
                     Name = $"{formattedQuantity}{unit} {name}",
+<<<<<<< HEAD
                     Quantity = "1",
+=======
+>>>>>>> Yao
                     IsSelected = true
                 });
             }
@@ -146,4 +149,8 @@ namespace RecipeManager.BusinessLogic
             }
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> Yao

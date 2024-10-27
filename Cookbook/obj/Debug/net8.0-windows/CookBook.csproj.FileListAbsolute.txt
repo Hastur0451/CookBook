@@ -254,6 +254,65 @@ D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\ne
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\CookBook.pdb
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\CookBook.genruntimeconfig.cache
 D:\UTS File\Application Development with .NET\Assessment 2\Cookbook\obj\Debug\net8.0-windows\ref\CookBook.dll
+<<<<<<< HEAD
+=======
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\obj\Debug\net8.0-windows\CookBook.csproj.AssemblyReference.cache
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Windows\App.baml
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Pages\CustomRecipePage.g.cs
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Pages\FavoriteButton.g.cs
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Pages\FavoriteRecipePage.g.cs
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Pages\SearchRecipePage.g.cs
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Pages\ShoppingListPage.g.cs
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Windows\App.g.cs
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Windows\MainWindow.g.cs
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\obj\Debug\net8.0-windows\CookBook_MarkupCompile.cache
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\obj\Debug\net8.0-windows\CookBook_MarkupCompile.lref
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\obj\Debug\net8.0-windows\CookBook.dll
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\obj\Debug\net8.0-windows\refint\CookBook.dll
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\obj\Debug\net8.0-windows\CookBook.pdb
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\bin\Debug\net8.0-windows\NUnit3.TestAdapter.dll
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\bin\Debug\net8.0-windows\NUnit3.TestAdapter.pdb
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\bin\Debug\net8.0-windows\nunit.engine.dll
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\bin\Debug\net8.0-windows\nunit.engine.api.dll
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\bin\Debug\net8.0-windows\nunit.engine.core.dll
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\bin\Debug\net8.0-windows\testcentric.engine.metadata.dll
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\bin\Debug\net8.0-windows\CookBook.exe
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\bin\Debug\net8.0-windows\CookBook.dll.config
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\bin\Debug\net8.0-windows\CookBook.deps.json
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\bin\Debug\net8.0-windows\CookBook.runtimeconfig.json
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\bin\Debug\net8.0-windows\CookBook.dll
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\bin\Debug\net8.0-windows\CookBook.pdb
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\bin\Debug\net8.0-windows\Dynamitey.dll
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\bin\Debug\net8.0-windows\ExtendedWPFConverters.dll
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\bin\Debug\net8.0-windows\ExtendedWPFVisualTreeHelper.dll
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\bin\Debug\net8.0-windows\HtmlAgilityPack.dll
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\bin\Debug\net8.0-windows\MaterialDesignColors.dll
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\bin\Debug\net8.0-windows\MaterialDesignThemes.Wpf.AddOns.dll
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\bin\Debug\net8.0-windows\MaterialDesignThemes.Wpf.dll
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\bin\Debug\net8.0-windows\Microsoft.WindowsAPICodePack.dll
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\bin\Debug\net8.0-windows\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\bin\Debug\net8.0-windows\Microsoft.Xaml.Behaviors.dll
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Pages\CustomRecipePage.baml
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Pages\FavoriteButton.baml
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Pages\FavoriteRecipePage.baml
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Pages\SearchRecipePage.baml
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Pages\ShoppingListPage.baml
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\obj\Debug\net8.0-windows\RecipeManager.GUI\Windows\MainWindow.baml
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\obj\Debug\net8.0-windows\CookBook.g.resources
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\obj\Debug\net8.0-windows\CookBook.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\obj\Debug\net8.0-windows\CookBook.AssemblyInfoInputs.cache
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\obj\Debug\net8.0-windows\CookBook.AssemblyInfo.cs
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\obj\Debug\net8.0-windows\CookBook.csproj.CoreCompileInputs.cache
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\obj\Debug\net8.0-windows\CookBook.sourcelink.json
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\obj\Debug\net8.0-windows\CookBook.csproj.Up2Date
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\obj\Debug\net8.0-windows\CookBook.genruntimeconfig.cache
+C:\Users\zyx62\OneDrive\Desktop\CookBook\Cookbook\obj\Debug\net8.0-windows\ref\CookBook.dll
+>>>>>>> Yao
 D:\UTS File\Application Development with .NET\Assessment 2\Code\Cookbook\bin\Debug\net8.0-windows\NUnit3.TestAdapter.dll
 D:\UTS File\Application Development with .NET\Assessment 2\Code\Cookbook\bin\Debug\net8.0-windows\NUnit3.TestAdapter.pdb
 D:\UTS File\Application Development with .NET\Assessment 2\Code\Cookbook\bin\Debug\net8.0-windows\nunit.engine.dll

@@ -11,7 +11,7 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="250"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
@@ -21,6 +21,7 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
+<<<<<<< HEAD
 
             <StackPanel Grid.Row="0">
                 <!-- App Title -->
@@ -31,12 +32,25 @@
                          HorizontalAlignment="Center"
                          TextAlignment="Center"
                          Margin="10,30,10,0"/>
+=======
+>>>>>>> Yao
 
-                <TextBlock Text="Group 12"
-                         Style="{StaticResource NavigationTextBlockStyle}"
-                         FontSize="16"
-                         HorizontalAlignment="Center"
-                         Margin="0,10,0,30"/>
+            <StackPanel Grid.Row="0">
+                <!-- App Title -->
+                <Button Style="{StaticResource NavigationTitleButtonStyle}"
+                     Click="AppTitle_Click">
+                    <StackPanel>
+                        <TextBlock Text="Recipe Generator"
+                      Style="{StaticResource NavigationTextBlockStyle}"
+                      FontSize="24"
+                      FontWeight="Bold"
+                      TextAlignment="Center"/>
+                        <TextBlock Text="Group 12"
+                      Style="{StaticResource NavigationTextBlockStyle}"
+                      FontSize="16"
+                      Margin="0,5,0,30"/>
+                    </StackPanel>
+                </Button>
 
                 <!-- Navigation Buttons -->
                 <ListBox x:Name="navigationList" 
@@ -154,15 +168,13 @@
                         </Grid.ColumnDefinitions>
 
                         <TextBox x:Name="welcomeSearchBox"
-                                FontSize="16"
-                                Background="White"
-                                Foreground="{StaticResource TextPrimaryBrush}"
-                                Padding="15,10"
-                                Height="45"
-                                VerticalContentAlignment="Center"
-                                KeyDown="WelcomeSearchBox_KeyDown"/>
+             Style="{StaticResource BaseTextBoxStyle}"
+             FontSize="16"
+             Height="45"
+             KeyDown="WelcomeSearchBox_KeyDown"/>
 
                         <Button x:Name="welcomeSearchButton"
+<<<<<<< HEAD
                                 Grid.Column="1"
                                 Content="Search"
                                 Width="100"
@@ -173,6 +185,16 @@
                                 Background="Purple" 
                                 Margin="10,0,0,0"
                                 Click="WelcomeSearchButton_Click"/>
+=======
+            Grid.Column="1"
+            Style="{StaticResource BaseButtonStyle}"
+            Content="Search"
+            Width="100"
+            Height="45"
+            FontSize="16"
+            Margin="10,0,0,0"
+            Click="WelcomeSearchButton_Click"/>
+>>>>>>> Yao
                     </Grid>
 
                     <Grid Margin="0,60,0,0">

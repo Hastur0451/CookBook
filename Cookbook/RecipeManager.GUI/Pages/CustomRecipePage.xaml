@@ -7,10 +7,96 @@
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="800">
 
+<<<<<<< HEAD
+=======
+    <UserControl.Resources>
+        <!-- Base Button Style -->
+        <Style x:Key="BaseButtonStyle" TargetType="Button">
+            <Setter Property="Height" Value="32"/>
+            <Setter Property="Padding" Value="15,0"/>
+            <Setter Property="Background" Value="#673AB7"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="4">
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                            VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#5E35B1"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Secondary Button Style -->
+        <Style x:Key="SecondaryButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="#673AB7"/>
+            <Setter Property="BorderBrush" Value="#673AB7"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#F3E5F5"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Icon Button Style -->
+        <Style x:Key="IconButtonStyle" TargetType="Button">
+            <Setter Property="Width" Value="32"/>
+            <Setter Property="Height" Value="32"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                CornerRadius="4">
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                            VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#F3E5F5"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- TextBox Style -->
+        <Style x:Key="TextBoxStyle" TargetType="TextBox">
+            <Setter Property="Height" Value="32"/>
+            <Setter Property="Padding" Value="10,0"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="#E0E0E0"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="4"/>
+                </Style>
+            </Style.Resources>
+        </Style>
+    </UserControl.Resources>
+
+>>>>>>> Yao
     <Grid Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
+<<<<<<< HEAD
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
@@ -27,12 +113,26 @@
                     Content="Search"
                     Width="80"
                     Click="BtnCustomSearch_Click"/>
+=======
+        </Grid.RowDefinitions>
+
+        <!-- Search Area -->
+        <DockPanel Grid.Row="0" LastChildFill="True" Margin="0,0,0,20">
+            <Button DockPanel.Dock="Right" 
+                    Style="{StaticResource BaseButtonStyle}"
+                    Content="Search"
+                    Margin="10,0,0,0"
+                    Click="BtnCustomSearch_Click"/>
+            <TextBox x:Name="customRecipeSearch"
+                     Style="{StaticResource TextBoxStyle}"/>
+>>>>>>> Yao
         </DockPanel>
 
         <!-- Main Content Area -->
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
+<<<<<<< HEAD
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
@@ -64,16 +164,55 @@
                         </Button>
 
                         <!-- Recipe List -->
+=======
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Recipe List -->
+            <Border Grid.Column="0"
+                    Background="White"
+                    BorderBrush="#E0E0E0"
+                    BorderThickness="1"
+                    CornerRadius="4">
+
+                <DockPanel Margin="15">
+                    <!-- Add New Recipe Button -->
+                    <Button DockPanel.Dock="Top"
+                            x:Name="btnAddNewRecipe"
+                            Height="50"
+                            Margin="0,0,0,15"
+                            Click="BtnAddNewRecipe_Click"
+                            Style="{StaticResource SecondaryButtonStyle}">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="+"
+                                     FontSize="20"
+                                     Margin="0,0,8,0"
+                                     VerticalAlignment="Center"/>
+                            <TextBlock Text="Add New Recipe"
+                                     FontSize="14"
+                                     VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                    <!-- Recipe List -->
+                    <ScrollViewer>
+>>>>>>> Yao
                         <ItemsControl x:Name="recipeList">
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>
                                     <Border Background="White"
+<<<<<<< HEAD
                                             BorderBrush="{StaticResource BorderBrush}"
+=======
+                                            BorderBrush="#E0E0E0"
+>>>>>>> Yao
                                             BorderThickness="1"
                                             CornerRadius="4"
                                             Margin="0,0,0,10"
                                             Padding="15">
                                         <Grid>
+<<<<<<< HEAD
                                             <TextBlock Text="{Binding Name}"
                                                      FontSize="16"/>
                                             <StackPanel Orientation="Horizontal"
@@ -87,12 +226,40 @@
                                                         Click="DeleteRecipe_Click"
                                                         Tag="{Binding Id}"
                                                         Style="{StaticResource SmallButtonStyle}"/>
+=======
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Text="{Binding Name}"
+                                                     FontSize="14"
+                                                     VerticalAlignment="Center"/>
+
+                                            <StackPanel Grid.Column="1" 
+                                                      Orientation="Horizontal"
+                                                      Margin="0,0,0,0">
+                                                <Button Style="{StaticResource IconButtonStyle}"
+                                                        Click="EditRecipe_Click"
+                                                        Tag="{Binding Id}"
+                                                        Margin="0,0,8,0">
+                                                    <TextBlock Text="✎" 
+                                                             FontSize="16"/>
+                                                </Button>
+                                                <Button Style="{StaticResource IconButtonStyle}"
+                                                        Click="DeleteRecipe_Click"
+                                                        Tag="{Binding Id}">
+                                                    <TextBlock Text="🗑" 
+                                                             FontSize="16"/>
+                                                </Button>
+>>>>>>> Yao
                                             </StackPanel>
                                         </Grid>
                                     </Border>
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
                         </ItemsControl>
+<<<<<<< HEAD
                     </StackPanel>
                 </ScrollViewer>
             </Border>
@@ -105,6 +272,28 @@
                     CornerRadius="4">
 
                 <Grid x:Name="recipeDetails" Margin="20">
+=======
+                    </ScrollViewer>
+                </DockPanel>
+            </Border>
+
+            <!-- Splitter -->
+            <GridSplitter Grid.Column="1" 
+                         Width="20"
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Stretch"
+                         Background="Transparent"/>
+
+            <!-- Recipe Details -->
+            <Border Grid.Column="2"
+                    x:Name="recipeDetailsPanel"
+                    Background="White"
+                    BorderBrush="#E0E0E0"
+                    BorderThickness="1"
+                    CornerRadius="4">
+
+                <Grid x:Name="detailsGrid" Margin="15">
+>>>>>>> Yao
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="*"/>
@@ -112,6 +301,7 @@
                     </Grid.RowDefinitions>
 
                     <!-- Recipe Name Input -->
+<<<<<<< HEAD
                     <StackPanel Grid.Row="0">
                         <TextBlock Text="Recipe Name"
                                  FontSize="16"
@@ -119,10 +309,20 @@
                                  Margin="0,0,0,10"/>
                         <TextBox x:Name="txtRecipeName"
                                 FontSize="14"
+=======
+                    <StackPanel Grid.Row="0" Visibility="Collapsed">
+                        <TextBlock Text="Recipe Name"
+                                 FontSize="14"
+                                 FontWeight="SemiBold"
+                                 Margin="0,0,0,8"/>
+                        <TextBox x:Name="txtRecipeName"
+                                Style="{StaticResource TextBoxStyle}"
+>>>>>>> Yao
                                 Margin="0,0,0,20"/>
                     </StackPanel>
 
                     <!-- Ingredients List -->
+<<<<<<< HEAD
                     <StackPanel Grid.Row="1">
                         <TextBlock Text="Ingredients"
                                    FontSize="16"
@@ -174,9 +374,79 @@
                         <Button Content="Add to Shopping List"
                                 Click="AddToShoppingList_Click"
                                 Style="{StaticResource SecondaryButtonStyle}"/>
+=======
+                    <DockPanel Grid.Row="1" Visibility="Collapsed">
+                        <TextBlock DockPanel.Dock="Top"
+                                 Text="Ingredients"
+                                 FontSize="14"
+                                 FontWeight="SemiBold"
+                                 Margin="0,0,0,8"/>
+
+                        <Button DockPanel.Dock="Top"
+                                Content="Add Ingredient"
+                                Style="{StaticResource SecondaryButtonStyle}"
+                                Click="AddIngredient_Click"
+                                HorizontalAlignment="Left"
+                                Margin="0,0,0,15"/>
+
+                        <ScrollViewer>
+                            <ItemsControl x:Name="ingredientsList">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid Margin="0,0,0,8">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="100"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBox Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}"
+                                                    Style="{StaticResource TextBoxStyle}"
+                                                    Margin="0,0,8,0"/>
+
+                                            <TextBox Grid.Column="1"
+                                                    Text="{Binding Quantity, UpdateSourceTrigger=PropertyChanged}"
+                                                    Style="{StaticResource TextBoxStyle}"
+                                                    Margin="0,0,8,0"/>
+
+                                            <Button Grid.Column="2"
+                                                    Style="{StaticResource IconButtonStyle}"
+                                                    Click="RemoveIngredient_Click">
+                                                <TextBlock Text="×" 
+                                                         FontSize="20"/>
+                                            </Button>
+                                        </Grid>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </ScrollViewer>
+                    </DockPanel>
+
+                    <!-- Bottom Buttons -->
+                    <StackPanel Grid.Row="2"
+                              Orientation="Horizontal"
+                              HorizontalAlignment="Right"
+                              Margin="0,20,0,0"
+                              Visibility="Collapsed">
+                        <Button Content="Cancel"
+                                Style="{StaticResource SecondaryButtonStyle}"
+                                Click="CancelEdit_Click"
+                                Margin="0,0,10,0"/>
+                        <Button Content="Save Recipe"
+                                Style="{StaticResource BaseButtonStyle}"
+                                Click="SaveRecipe_Click"
+                                Margin="0,0,10,0"/>
+                        <Button Content="Add to Shopping List"
+                                Style="{StaticResource SecondaryButtonStyle}"
+                                Click="AddToShoppingList_Click"/>
+>>>>>>> Yao
                     </StackPanel>
                 </Grid>
             </Border>
         </Grid>
     </Grid>
+<<<<<<< HEAD
 </UserControl>
+=======
+</UserControl>
+>>>>>>> Yao

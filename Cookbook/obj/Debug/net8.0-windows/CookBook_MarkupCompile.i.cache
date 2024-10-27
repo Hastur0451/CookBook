@@ -12,7 +12,11 @@ TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 
 7-1522955971
 
+<<<<<<< HEAD
 23-1123733613
+=======
+21-759493666
+>>>>>>> Yao
 221-319716500
 RecipeManager.GUI\Pages\CustomRecipePage.xaml;RecipeManager.GUI\Pages\FavoriteButton.xaml;RecipeManager.GUI\Pages\FavoriteRecipePage.xaml;RecipeManager.GUI\Pages\SearchRecipePage.xaml;RecipeManager.GUI\Pages\ShoppingListPage.xaml;RecipeManager.GUI\Windows\App.xaml;RecipeManager.GUI\Windows\MainWindow.xaml;
 

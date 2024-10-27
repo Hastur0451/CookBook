@@ -1,4 +1,5 @@
 ﻿<Page x:Class="CookBook.RecipeManager.GUI.Pages.ShoppingListPage"
+<<<<<<< HEAD
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -8,6 +9,26 @@
       Title="ShoppingListPage">
 
     <Grid Margin="20">
+=======
+     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+     xmlns:local="clr-namespace:CookBook.RecipeManager.GUI.Pages"
+     mc:Ignorable="d">
+
+    <Page.Resources>
+        <Style x:Key="PopupStyle" TargetType="Border">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="4"/>
+            <Setter Property="Padding" Value="20"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid x:Name="mainGrid">
+>>>>>>> Yao
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -21,6 +42,7 @@
               FontWeight="Bold"
               Foreground="{StaticResource TextPrimaryBrush}"/>
 
+<<<<<<< HEAD
             <!-- Add New Item Button and Merge Button -->
             <StackPanel DockPanel.Dock="Right" 
                 Orientation="Horizontal">
@@ -33,14 +55,35 @@
                 Width="100"
                 Click="BtnAddItem_Click"/>
             </StackPanel>
+=======
+            <Button Content="Add Item"
+            Style="{StaticResource BaseButtonStyle}"
+            DockPanel.Dock="Right"
+            Width="100"
+            Click="BtnAddItem_Click"/>
+
+            <Button Content="Merge Items"
+            Style="{StaticResource SecondaryButtonStyle}"
+            DockPanel.Dock="Right"
+            Width="100"
+            Margin="0,0,10,0"
+            Click="BtnMergeItems_Click"/>
+>>>>>>> Yao
         </DockPanel>
 
         <!-- Shopping List Area -->
         <Border Grid.Row="1"
+<<<<<<< HEAD
                 BorderThickness="1"
                 BorderBrush="{StaticResource BorderBrush}"
                 Background="White"
                 CornerRadius="4">
+=======
+               BorderThickness="1"
+               BorderBrush="{StaticResource BorderBrush}"
+               Background="White"
+               CornerRadius="4">
+>>>>>>> Yao
             <ScrollViewer>
                 <ItemsControl x:Name="shoppingList" Margin="10">
                     <ItemsControl.ItemTemplate>
@@ -49,12 +92,16 @@
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="*"/>
+<<<<<<< HEAD
                                     <ColumnDefinition Width="100"/>
                                     <ColumnDefinition Width="Auto"/>
+=======
+>>>>>>> Yao
                                 </Grid.ColumnDefinitions>
 
                                 <!-- Checkbox -->
                                 <CheckBox Grid.Column="0" 
+<<<<<<< HEAD
                                          IsChecked="{Binding IsSelected}"
                                          VerticalAlignment="Center"
                                          Margin="0,0,10,0"/>
@@ -80,6 +127,16 @@
                                         Margin="5,0,0,0"
                                         Click="BtnDeleteItem_Click"
                                         Tag="{Binding}"/>
+=======
+                                        IsChecked="{Binding IsSelected}"
+                                        VerticalAlignment="Center"
+                                        Margin="0,0,10,0"/>
+
+                                <!-- Item Name -->
+                                <TextBlock Grid.Column="1" 
+                                        Text="{Binding Name}"
+                                        VerticalAlignment="Center"/>
+>>>>>>> Yao
                             </Grid>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
@@ -89,6 +146,7 @@
 
         <!-- Action Buttons -->
         <StackPanel Grid.Row="2" 
+<<<<<<< HEAD
                     Orientation="Horizontal"
                     HorizontalAlignment="Right"
                     Margin="0,20,0,0">
@@ -100,10 +158,26 @@
             <Button Content="Save as Text"
                     Width="150"
                     Click="BtnSaveAsText_Click"/>
+=======
+           Orientation="Horizontal"
+           HorizontalAlignment="Right"
+           Margin="0,20,0,0">
+            <Button Content="Copy to Clipboard"
+            Style="{StaticResource SecondaryButtonStyle}"
+            Width="150"
+            Margin="0,0,10,0"
+            Click="BtnCopyToClipboard_Click"/>
+
+            <Button Content="Save as Text"
+            Style="{StaticResource BaseButtonStyle}"
+            Width="150"
+            Click="BtnSaveAsText_Click"/>
+>>>>>>> Yao
         </StackPanel>
 
         <!-- Add Item Popup -->
         <Popup x:Name="addItemPopup"
+<<<<<<< HEAD
                PlacementTarget="{Binding ElementName=MainGrid}"
                StaysOpen="False">
             <Border Background="White"
@@ -136,9 +210,46 @@
                         <Button Content="Add"
                                 Width="100"
                                 Click="BtnConfirmAdd_Click"/>
+=======
+              Placement="Center"
+              AllowsTransparency="True"
+              StaysOpen="False">
+            <Border Style="{StaticResource PopupStyle}">
+                <StackPanel Width="300">
+                    <TextBlock Text="Add New Item"
+                            FontSize="18"
+                            FontWeight="Bold"
+                            Margin="0,0,0,15"/>
+
+                    <TextBlock Text="Quantity:"
+                            Margin="0,0,0,5"/>
+                    <TextBox x:Name="txtNewItemQuantity"
+                           Margin="0,0,0,15"/>
+
+                    <TextBlock Text="Item Name:"
+                            Margin="0,0,0,5"/>
+                    <TextBox x:Name="txtNewItemName"
+                           Margin="0,0,0,15"/>
+
+                    <StackPanel Orientation="Horizontal"
+           HorizontalAlignment="Right">
+                        <Button Content="Cancel"
+            Style="{StaticResource SecondaryButtonStyle}"
+            Width="100"
+            Margin="0,0,10,0"
+            Click="BtnCancelAdd_Click"/>
+                        <Button Content="Add"
+            Style="{StaticResource BaseButtonStyle}"
+            Width="100"
+            Click="BtnConfirmAdd_Click"/>
+>>>>>>> Yao
                     </StackPanel>
                 </StackPanel>
             </Border>
         </Popup>
     </Grid>
+<<<<<<< HEAD
 </Page>
+=======
+</Page>
+>>>>>>> Yao
