@@ -8,11 +8,12 @@ namespace RecipeManager.BusinessLogic
 {
     public class ShoppingListMerger
     {
-        // 扩展匹配模式以支持更多单位
+        // Pattern to match quantity, unit, and name in ingredient strings
         private static readonly Regex MeasurementPattern = new(
             @"^(?<quantity>\d+)\s*(?<unit>g|kg|ml|l|gram|grams|kilo|kilos|kilogram|kilograms|milliliter|milliliters|liter|liters|oz|ounce|ounces|lb|lbs|pound|pounds)\s+(?<name>.+)$",
             RegexOptions.IgnoreCase | RegexOptions.Compiled);
 
+        // Merges duplicate items in the shopping list by summing quantities with matching units
         public List<ShoppingListItem> MergeItems(List<ShoppingListItem> items)
         {
             if (items == null || items.Count <= 1)
@@ -26,13 +27,13 @@ namespace RecipeManager.BusinessLogic
                 var match = MeasurementPattern.Match(item.Name);
                 if (match.Success)
                 {
-                    // 解析带计量单位的项目
+                    // Parse items with measurements
                     if (decimal.TryParse(match.Groups["quantity"].Value, out decimal quantity))
                     {
                         var unit = NormalizeUnitName(match.Groups["unit"].Value);
                         var name = match.Groups["name"].Value.Trim();
 
-                        // 标准化单位和数量
+                        // Normalize unit and quantity
                         quantity = NormalizeQuantity(quantity, unit, out string normalizedUnit);
                         var key = name.ToLower();
 
@@ -48,21 +49,21 @@ namespace RecipeManager.BusinessLogic
                     }
                     else
                     {
-                        result.Add(item);
+                        result.Add(item); // Add item if parsing fails
                     }
                 }
                 else
                 {
-                    result.Add(item);
+                    result.Add(item); // Add item without measurements
                 }
             }
 
-            // 添加合并后的项目
+            // Add merged items to result list
             foreach (var measurementItem in measurementItems)
             {
                 var (totalQuantity, unit, name) = measurementItem.Value;
 
-                // 格式化数量以移除不必要的小数点
+                // Format quantity to remove unnecessary decimals
                 string formattedQuantity = totalQuantity % 1 == 0
                     ? ((int)totalQuantity).ToString()
                     : totalQuantity.ToString("0.##");
@@ -77,9 +78,9 @@ namespace RecipeManager.BusinessLogic
             return result.OrderBy(x => x.Name).ToList();
         }
 
+        // Normalizes units to a standard form
         private string NormalizeUnitName(string unit)
         {
-            // 单位名称标准化映射
             switch (unit.ToLower())
             {
                 case "gram":
@@ -119,6 +120,7 @@ namespace RecipeManager.BusinessLogic
             }
         }
 
+        // Converts quantities based on the unit (e.g., kg to g)
         private decimal NormalizeQuantity(decimal quantity, string unit, out string normalizedUnit)
         {
             switch (unit)
@@ -133,11 +135,11 @@ namespace RecipeManager.BusinessLogic
 
                 case "oz":
                     normalizedUnit = "g";
-                    return quantity * 28.35m; // 1盎司 ≈ 28.35克
+                    return quantity * 28.35m; // 1 ounce ≈ 28.35 grams
 
                 case "lb":
                     normalizedUnit = "g";
-                    return quantity * 453.592m; // 1磅 ≈ 453.592克
+                    return quantity * 453.592m; // 1 pound ≈ 453.592 grams
 
                 default:
                     normalizedUnit = unit;

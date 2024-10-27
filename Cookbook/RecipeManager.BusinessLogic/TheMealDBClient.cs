@@ -10,19 +10,25 @@ namespace RecipeManager.BusinessLogic
     {
         private readonly HttpClient _httpClient;
         private const string BaseUrl = "https://www.themealdb.com/api/json/v1/1/";
+
+        // Properties for recipe details
         public string Id { get; set; }
         public string Name { get; set; }
         public string Image { get; set; }
 
+        // Returns the name of the recipe for display purposes
         public override string ToString()
         {
             return Name;
         }
+
+        // Initializes HttpClient
         public TheMealDBClient()
         {
             _httpClient = new HttpClient();
         }
 
+        // Searches for meals by a given term and returns a list of search results
         public async Task<List<RecipeSearchResult>> SearchMeals(string searchTerm)
         {
             var response = await _httpClient.GetStringAsync($"{BaseUrl}search.php?s={searchTerm}");
@@ -45,6 +51,7 @@ namespace RecipeManager.BusinessLogic
             return results;
         }
 
+        // Retrieves detailed information about a meal by its ID
         public async Task<Recipe> GetRecipeById(string id)
         {
             var response = await _httpClient.GetStringAsync($"{BaseUrl}lookup.php?i={id}");
@@ -63,6 +70,7 @@ namespace RecipeManager.BusinessLogic
                 Measures = new List<string>()
             };
 
+            // Parses up to 20 ingredients and measures
             for (int i = 1; i <= 20; i++)
             {
                 var ingredient = meal.GetProperty($"strIngredient{i}").GetString();
@@ -79,6 +87,7 @@ namespace RecipeManager.BusinessLogic
         }
     }
 
+    // Model for a recipe search result
     public class RecipeSearchResult
     {
         public string Id { get; set; }
@@ -86,6 +95,7 @@ namespace RecipeManager.BusinessLogic
         public string Image { get; set; }
     }
 
+    // Model for detailed recipe information
     public class Recipe
     {
         public string Id { get; set; }
