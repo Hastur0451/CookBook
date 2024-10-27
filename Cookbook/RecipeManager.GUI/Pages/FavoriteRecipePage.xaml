@@ -1,0 +1,139 @@
+﻿<Page x:Class="CookBook.RecipeManager.GUI.Pages.FavoriteRecipePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CookBook.RecipeManager.GUI.Pages"
+      xmlns:models="clr-namespace:CookBook.RecipeManager.GUI.Models"
+      mc:Ignorable="d" 
+      Title="FavoriteRecipePage">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Search Area -->
+        <DockPanel Grid.Row="0" LastChildFill="False" Margin="0,0,0,10">
+            <TextBox x:Name="txtSearch" 
+                     Width="300"
+                     DockPanel.Dock="Left"
+                     FontSize="14"
+                     Background="White"
+                     Foreground="{StaticResource TextPrimaryBrush}"
+                     BorderBrush="{StaticResource BorderBrush}"
+                     Padding="15,10"
+                     Margin="0,0,10,0"
+                     TextChanged="TxtSearch_TextChanged"/>
+        </DockPanel>
+
+        <!-- Results Display Area -->
+        <Grid Grid.Row="1" Margin="0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Recipe List -->
+            <Border Grid.Column="0" 
+                    BorderThickness="1" 
+                    BorderBrush="{StaticResource BorderBrush}" 
+                    CornerRadius="4" 
+                    Margin="0,0,10,0"
+                    Background="White">
+                <ListBox x:Name="lstFavorites" 
+                        BorderThickness="0"
+                        Background="Transparent"
+                        SelectionChanged="LstFavorites_SelectionChanged">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Name}" 
+                                     Padding="8,4" 
+                                     TextWrapping="Wrap"/>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Border>
+
+            <!-- Recipe Details Panel -->
+            <ScrollViewer Grid.Column="1">
+                <Border x:Name="recipeDetailPanel"
+                        BorderThickness="1" 
+                        BorderBrush="{StaticResource BorderBrush}" 
+                        CornerRadius="4"
+                        Background="White"
+                        Visibility="Collapsed">
+                    <DockPanel Margin="20">
+                        <!-- Title -->
+<<<<<<<< HEAD:RecipeManager.GUI/Pages/SearchRecipePage.xaml
+						<DockPanel DockPanel.Dock="Top" Margin="0,0,0,20">
+							<models:FavoriteButton x:Name="favoriteButton"
+												  DockPanel.Dock="Right"
+												  Margin="10,0,0,0"
+												  VerticalAlignment="Center"
+												  FavoriteChanged="FavoriteButton_FavoriteChanged"/>
+							<TextBlock x:Name="recipeTitle"
+									  FontSize="28"
+									  FontWeight="Bold"
+									  Foreground="{StaticResource TextPrimaryBrush}"/>
+						</DockPanel>
+========
+                        <DockPanel DockPanel.Dock="Top" Margin="0,0,0,20">
+                            <models:FavoriteButton x:Name="favoriteButton"
+                                                 DockPanel.Dock="Right"
+                                                 Margin="10,0,0,0"
+                                                 VerticalAlignment="Center"
+                                                 FavoriteChanged="FavoriteButton_FavoriteChanged"/>
+                            <TextBlock x:Name="recipeTitle"
+                                     FontSize="28"
+                                     FontWeight="Bold"
+                                     Foreground="{StaticResource TextPrimaryBrush}"/>
+                        </DockPanel>
+
+>>>>>>>> a295bba56e7536ac999cf3e70c5173da139788eb:Cookbook/RecipeManager.GUI/Pages/FavoriteRecipePage.xaml
+                        <!-- Save Button -->
+                        <Button x:Name="btnSaveList"
+                                DockPanel.Dock="Bottom"
+                                Content="Save Shopping List"
+                                Click="BtnSaveList_Click"
+                                HorizontalAlignment="Right"
+                                Margin="0,10,0,0"/>
+
+                        <!-- Content Area -->
+                        <StackPanel>
+                            <!-- Ingredients List -->
+                            <TextBlock Text="Ingredients"
+                                     FontSize="20"
+                                     FontWeight="Bold"
+                                     Foreground="{StaticResource TextPrimaryBrush}"
+                                     Margin="0,0,0,10"/>
+
+                            <ItemsControl x:Name="ingredientsList" 
+                                        Margin="0,0,0,20">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <CheckBox Content="{Binding}"
+                                                Margin="0,4"/>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+
+                            <!-- Cooking Instructions -->
+                            <Expander Header="Instructions"
+                                     x:Name="instructionsExpander"
+                                     Margin="0,0,0,20">
+                                <TextBlock x:Name="recipeInstructions"
+                                         TextWrapping="Wrap"
+                                         FontSize="14"
+                                         Foreground="{StaticResource TextPrimaryBrush}"
+                                         LineHeight="24"
+                                         Margin="0,10,0,0"/>
+                            </Expander>
+                        </StackPanel>
+                    </DockPanel>
+                </Border>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Page>
