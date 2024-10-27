@@ -100,13 +100,7 @@
                                      Margin="0,0,0,10"/>
 
                             <ItemsControl x:Name="ingredientsList" 
-                                        Margin="0,0,0,20">
-                                <ItemsControl.ItemTemplate>
-                                    <DataTemplate>
-                                        <CheckBox Content="{Binding}"
-                                                Margin="0,4"/>
-                                    </DataTemplate>
-                                </ItemsControl.ItemTemplate>
+              Margin="0,0,0,20">
                             </ItemsControl>
 
                             <!-- Cooking Instructions -->

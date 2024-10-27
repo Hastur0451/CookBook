@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Code\\Cookbook\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\uts file\\application development with .net\\assessment 2\\code\\cookbook\\recipemanager.gui\\pages\\shoppinglistpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:recipemanager.gui\\pages\\shoppinglistpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\uts file\\application development with .net\\assessment 2\\code\\cookbook\\recipemanager.gui\\pages\\searchrecipepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:recipemanager.gui\\pages\\searchrecipepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\uts file\\application development with .net\\assessment 2\\code\\cookbook\\recipemanager.gui\\pages\\shoppinglistpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:recipemanager.gui\\pages\\shoppinglistpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\uts file\\application development with .net\\assessment 2\\code\\cookbook\\recipemanager.gui\\windows\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:recipemanager.gui\\windows\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\uts file\\application development with .net\\assessment 2\\code\\cookbook\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\uts file\\application development with .net\\assessment 2\\code\\cookbook\\recipemanager.gui\\pages\\shoppinglistpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:recipemanager.gui\\pages\\shoppinglistpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\uts file\\application development with .net\\assessment 2\\code\\cookbook\\recipemanager.gui\\pages\\shoppinglistpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:recipemanager.gui\\pages\\shoppinglistpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\uts file\\application development with .net\\assessment 2\\code\\cookbook\\recipemanager.gui\\models\\shoppinglistitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -53,11 +57,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Code\\Cookbook\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Code\\Cookbook\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T04:34:55.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "SearchRecipePage.xaml",
               "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Code\\Cookbook\\RecipeManager.GUI\\Pages\\SearchRecipePage.xaml",
               "RelativeDocumentMoniker": "RecipeManager.GUI\\Pages\\SearchRecipePage.xaml",
@@ -69,7 +86,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "ShoppingListPage.xaml",
               "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Code\\Cookbook\\RecipeManager.GUI\\Pages\\ShoppingListPage.xaml",
               "RelativeDocumentMoniker": "RecipeManager.GUI\\Pages\\ShoppingListPage.xaml",
@@ -81,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Code\\Cookbook\\RecipeManager.GUI\\Windows\\MainWindow.xaml",
               "RelativeDocumentMoniker": "RecipeManager.GUI\\Windows\\MainWindow.xaml",
@@ -93,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "ShoppingListPage.xaml.cs",
               "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Code\\Cookbook\\RecipeManager.GUI\\Pages\\ShoppingListPage.xaml.cs",
               "RelativeDocumentMoniker": "RecipeManager.GUI\\Pages\\ShoppingListPage.xaml.cs",
@@ -101,12 +118,11 @@
               "RelativeToolTip": "RecipeManager.GUI\\Pages\\ShoppingListPage.xaml.cs",
               "ViewState": "AQIAAKoAAAAAAAAAAAAuwH0AAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T13:57:07.534Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-26T13:57:07.534Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "RecipeDatabase.cs",
               "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Code\\Cookbook\\RecipeManager.DataBase\\RecipeDatabase.cs",
               "RelativeDocumentMoniker": "RecipeManager.DataBase\\RecipeDatabase.cs",
@@ -114,12 +130,11 @@
               "RelativeToolTip": "RecipeManager.DataBase\\RecipeDatabase.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T13:54:57.701Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-26T13:54:57.701Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "recipes.json",
               "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Code\\Cookbook\\bin\\Debug\\net8.0-windows\\recipes.json",
               "RelativeDocumentMoniker": "bin\\Debug\\net8.0-windows\\recipes.json",
@@ -127,8 +142,54 @@
               "RelativeToolTip": "bin\\Debug\\net8.0-windows\\recipes.json",
               "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-26T13:53:44.645Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-26T13:53:44.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CustomRecipePage.xaml",
+              "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Code\\Cookbook\\RecipeManager.GUI\\Pages\\CustomRecipePage.xaml",
+              "RelativeDocumentMoniker": "RecipeManager.GUI\\Pages\\CustomRecipePage.xaml",
+              "ToolTip": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Code\\Cookbook\\RecipeManager.GUI\\Pages\\CustomRecipePage.xaml",
+              "RelativeToolTip": "RecipeManager.GUI\\Pages\\CustomRecipePage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-26T13:46:04.805Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Code\\TestProject1\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "..\\TestProject1\\UnitTest1.cs",
+              "ToolTip": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Code\\TestProject1\\UnitTest1.cs",
+              "RelativeToolTip": "..\\TestProject1\\UnitTest1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T10:49:36.554Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ShoppingListDatabase.cs",
+              "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Code\\Cookbook\\RecipeManager.DataBase\\ShoppingListDatabase.cs",
+              "RelativeDocumentMoniker": "RecipeManager.DataBase\\ShoppingListDatabase.cs",
+              "ToolTip": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Code\\Cookbook\\RecipeManager.DataBase\\ShoppingListDatabase.cs",
+              "RelativeToolTip": "RecipeManager.DataBase\\ShoppingListDatabase.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T09:49:52.526Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ShoppingListItem.cs",
+              "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Code\\Cookbook\\RecipeManager.GUI\\Models\\ShoppingListItem.cs",
+              "RelativeDocumentMoniker": "RecipeManager.GUI\\Models\\ShoppingListItem.cs",
+              "ToolTip": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Code\\Cookbook\\RecipeManager.GUI\\Models\\ShoppingListItem.cs",
+              "RelativeToolTip": "RecipeManager.GUI\\Models\\ShoppingListItem.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAxwBgAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T09:49:42.66Z"
             },
             {
               "$type": "Document",
@@ -138,61 +199,9 @@
               "RelativeDocumentMoniker": "RecipeManager.GUI\\Pages\\CustomRecipePage.xaml",
               "ToolTip": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Code\\Cookbook\\RecipeManager.GUI\\Pages\\CustomRecipePage.xaml",
               "RelativeToolTip": "RecipeManager.GUI\\Pages\\CustomRecipePage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-26T13:46:04.805Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UnitTest1.cs",
-              "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Code\\TestProject1\\UnitTest1.cs",
-              "RelativeDocumentMoniker": "..\\TestProject1\\UnitTest1.cs",
-              "ToolTip": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Code\\TestProject1\\UnitTest1.cs",
-              "RelativeToolTip": "..\\TestProject1\\UnitTest1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T10:49:36.554Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ShoppingListDatabase.cs",
-              "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Code\\Cookbook\\RecipeManager.DataBase\\ShoppingListDatabase.cs",
-              "RelativeDocumentMoniker": "RecipeManager.DataBase\\ShoppingListDatabase.cs",
-              "ToolTip": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Code\\Cookbook\\RecipeManager.DataBase\\ShoppingListDatabase.cs",
-              "RelativeToolTip": "RecipeManager.DataBase\\ShoppingListDatabase.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T09:49:52.526Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ShoppingListItem.cs",
-              "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Code\\Cookbook\\RecipeManager.GUI\\Models\\ShoppingListItem.cs",
-              "RelativeDocumentMoniker": "RecipeManager.GUI\\Models\\ShoppingListItem.cs",
-              "ToolTip": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Code\\Cookbook\\RecipeManager.GUI\\Models\\ShoppingListItem.cs",
-              "RelativeToolTip": "RecipeManager.GUI\\Models\\ShoppingListItem.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAxwBgAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T09:49:42.66Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CustomRecipePage.xaml",
-              "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Code\\Cookbook\\RecipeManager.GUI\\Pages\\CustomRecipePage.xaml",
-              "RelativeDocumentMoniker": "RecipeManager.GUI\\Pages\\CustomRecipePage.xaml",
-              "ToolTip": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Code\\Cookbook\\RecipeManager.GUI\\Pages\\CustomRecipePage.xaml",
-              "RelativeToolTip": "RecipeManager.GUI\\Pages\\CustomRecipePage.xaml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-26T13:46:07.916Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-26T13:46:07.916Z"
             }
           ]
         }
