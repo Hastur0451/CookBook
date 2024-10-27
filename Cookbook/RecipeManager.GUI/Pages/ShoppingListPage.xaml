@@ -26,20 +26,22 @@
         <!-- Header Area -->
         <DockPanel Grid.Row="0" Margin="0,0,0,20">
             <TextBlock Text="Shopping List"
-                     FontSize="24"
-                     FontWeight="Bold"
-                     Foreground="{StaticResource TextPrimaryBrush}"/>
+              FontSize="24"
+              FontWeight="Bold"
+              Foreground="{StaticResource TextPrimaryBrush}"/>
 
             <Button Content="Add Item"
-                   DockPanel.Dock="Right"
-                   Width="100"
-                   Click="BtnAddItem_Click"/>
+            Style="{StaticResource BaseButtonStyle}"
+            DockPanel.Dock="Right"
+            Width="100"
+            Click="BtnAddItem_Click"/>
 
             <Button Content="Merge Items"
-                   DockPanel.Dock="Right"
-                   Width="100"
-                   Margin="0,0,10,0"
-                   Click="BtnMergeItems_Click"/>
+            Style="{StaticResource SecondaryButtonStyle}"
+            DockPanel.Dock="Right"
+            Width="100"
+            Margin="0,0,10,0"
+            Click="BtnMergeItems_Click"/>
         </DockPanel>
 
         <!-- Shopping List Area -->
@@ -77,17 +79,19 @@
 
         <!-- Action Buttons -->
         <StackPanel Grid.Row="2" 
-                   Orientation="Horizontal"
-                   HorizontalAlignment="Right"
-                   Margin="0,20,0,0">
+           Orientation="Horizontal"
+           HorizontalAlignment="Right"
+           Margin="0,20,0,0">
             <Button Content="Copy to Clipboard"
-                   Width="150"
-                   Margin="0,0,10,0"
-                   Click="BtnCopyToClipboard_Click"/>
+            Style="{StaticResource SecondaryButtonStyle}"
+            Width="150"
+            Margin="0,0,10,0"
+            Click="BtnCopyToClipboard_Click"/>
 
             <Button Content="Save as Text"
-                   Width="150"
-                   Click="BtnSaveAsText_Click"/>
+            Style="{StaticResource BaseButtonStyle}"
+            Width="150"
+            Click="BtnSaveAsText_Click"/>
         </StackPanel>
 
         <!-- Add Item Popup -->
@@ -113,14 +117,16 @@
                            Margin="0,0,0,15"/>
 
                     <StackPanel Orientation="Horizontal"
-                             HorizontalAlignment="Right">
+           HorizontalAlignment="Right">
                         <Button Content="Cancel"
-                               Width="100"
-                               Margin="0,0,10,0"
-                               Click="BtnCancelAdd_Click"/>
+            Style="{StaticResource SecondaryButtonStyle}"
+            Width="100"
+            Margin="0,0,10,0"
+            Click="BtnCancelAdd_Click"/>
                         <Button Content="Add"
-                               Width="100"
-                               Click="BtnConfirmAdd_Click"/>
+            Style="{StaticResource BaseButtonStyle}"
+            Width="100"
+            Click="BtnConfirmAdd_Click"/>
                     </StackPanel>
                 </StackPanel>
             </Border>
