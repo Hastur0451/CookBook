@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Code\\Cookbook\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\uts file\\application development with .net\\assessment 2\\code\\cookbook\\recipemanager.gui\\pages\\favoriterecipepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:recipemanager.gui\\pages\\favoriterecipepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\uts file\\application development with .net\\assessment 2\\code\\cookbook\\recipemanager.gui\\pages\\favoriterecipepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:recipemanager.gui\\pages\\favoriterecipepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|d:\\uts file\\application development with .net\\assessment 2\\code\\cookbook\\recipemanager.gui\\pages\\favoriterecipepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56586750-A222-4D76-8F62-0D0E11411474}|CookBook.csproj|solutionrelative:recipemanager.gui\\pages\\favoriterecipepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\UTS File\\Application Development with .NET\\Assessment 2\\Code\\Cookbook\\bin\\Debug\\net8.0-windows\\shoppingList.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -86,24 +86,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "FavoriteRecipePage.xaml.cs",
               "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Code\\Cookbook\\RecipeManager.GUI\\Pages\\FavoriteRecipePage.xaml.cs",
               "RelativeDocumentMoniker": "RecipeManager.GUI\\Pages\\FavoriteRecipePage.xaml.cs",
               "ToolTip": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Code\\Cookbook\\RecipeManager.GUI\\Pages\\FavoriteRecipePage.xaml.cs",
               "RelativeToolTip": "RecipeManager.GUI\\Pages\\FavoriteRecipePage.xaml.cs",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAAwF0AAAAAAAAA",
+              "ViewState": "AQIAACoAAAAAAAAAAAAIwAsAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-27T09:47:39.269Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "FavoriteRecipePage.xaml",
               "DocumentMoniker": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Code\\Cookbook\\RecipeManager.GUI\\Pages\\FavoriteRecipePage.xaml",
               "RelativeDocumentMoniker": "RecipeManager.GUI\\Pages\\FavoriteRecipePage.xaml",
@@ -123,8 +123,7 @@
               "RelativeToolTip": "bin\\Debug\\net8.0-windows\\shoppingList.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-27T09:46:49.324Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-27T09:46:49.324Z"
             },
             {
               "$type": "Document",
@@ -136,8 +135,7 @@
               "RelativeToolTip": "RecipeManager.GUI\\Windows\\MainWindow.xaml.cs",
               "ViewState": "AQIAAB4AAAAAAAAAAAAYwDIAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T04:50:23.416Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-27T04:50:23.416Z"
             },
             {
               "$type": "Document",
@@ -172,8 +170,7 @@
               "RelativeToolTip": "RecipeManager.BusinessLogic\\Recipelogic.cs",
               "ViewState": "AQIAAAcAAAAAAAAAAAA3wBYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T04:49:38.125Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-27T04:49:38.125Z"
             },
             {
               "$type": "Document",
@@ -184,8 +181,7 @@
               "ToolTip": "D:\\UTS File\\Application Development with .NET\\Assessment 2\\Code\\Cookbook\\RecipeManager.GUI\\Pages\\SearchRecipePage.xaml",
               "RelativeToolTip": "RecipeManager.GUI\\Pages\\SearchRecipePage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-26T14:02:08.031Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-26T14:02:08.031Z"
             },
             {
               "$type": "Document",
@@ -231,8 +227,7 @@
               "RelativeToolTip": "RecipeManager.BusinessLogic\\Merge.cs",
               "ViewState": "AQIAAG8AAAAAAAAAAAAQwBQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T04:49:09.898Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-27T04:49:09.898Z"
             },
             {
               "$type": "Document",
@@ -244,8 +239,7 @@
               "RelativeToolTip": "RecipeManager.BusinessLogic\\Models.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T04:49:36.178Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-27T04:49:36.178Z"
             },
             {
               "$type": "Document",
