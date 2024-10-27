@@ -3,6 +3,7 @@ using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.IO;
 using RecipeManager.BusinessLogic;
 using CookBook.RecipeManager.GUI.Pages;
 using System.Linq;
@@ -14,6 +15,7 @@ namespace CookBook.RecipeManager.GUI.Windows
     public partial class MainWindow : Window
     {
         private readonly RecipeLogic _recipeLogic;
+        private readonly string _shoppingListPath = "shoppingList.json";
         private SearchRecipePage _searchPage;
         private FavoriteRecipePage _favoritePage;
         private ShoppingListPage _shoppingPage;
@@ -29,25 +31,16 @@ namespace CookBook.RecipeManager.GUI.Windows
                 string fatSecretConsumerSecret = "f72938e96e4e4ee7bf42873070c91110";
                 _recipeLogic = new RecipeLogic(fatSecretConsumerKey, fatSecretConsumerSecret);
 
-                // 初始化购物清单数据库
-                _shoppingListDatabase = new ShoppingListDatabase("shoppingList.json");
+                _shoppingListDatabase = new ShoppingListDatabase(_shoppingListPath);
 
-                // 初始化食谱列表
                 _addedRecipes = new ObservableCollection<RecipeItem>();
                 addedRecipesList.ItemsSource = _addedRecipes;
 
-                // 初始化各页面
-                _searchPage = new SearchRecipePage(_recipeLogic);
-                searchFrame.Content = _searchPage;
-
-                _favoritePage = new FavoriteRecipePage(_recipeLogic);
-                favoriteFrame.Content = _favoritePage;
-
-                _shoppingPage = new ShoppingListPage();
-                shoppingFrame.Content = _shoppingPage;
-
-                // 加载购物清单中的食材
+                InitializePages();
                 LoadShoppingListItems();
+
+                // Add window closing event handler
+                this.Closing += MainWindow_Closing;
             }
             catch (Exception ex)
             {
@@ -55,14 +48,31 @@ namespace CookBook.RecipeManager.GUI.Windows
             }
         }
 
+        /// <summary>
+        /// Initialize all pages of the application
+        /// </summary>
+        private void InitializePages()
+        {
+            _searchPage = new SearchRecipePage(_recipeLogic);
+            searchFrame.Content = _searchPage;
+
+            _favoritePage = new FavoriteRecipePage(_recipeLogic);
+            favoriteFrame.Content = _favoritePage;
+
+            _shoppingPage = new ShoppingListPage();
+            shoppingFrame.Content = _shoppingPage;
+        }
+
+        /// <summary>
+        /// Load shopping list items and display them in the list
+        /// </summary>
         private void LoadShoppingListItems()
         {
             try
             {
-                _addedRecipes.Clear(); // 清除现有项目
+                _addedRecipes.Clear();
                 var shoppingItems = _shoppingListDatabase.LoadShoppingList();
 
-                // 按名称分组并只添加一次
                 var groupedItems = shoppingItems
                     .Select(item => item.Name)
                     .Distinct()
@@ -79,17 +89,39 @@ namespace CookBook.RecipeManager.GUI.Windows
             }
         }
 
-        // 用于绑定的食谱项类
+        /// <summary>
+        /// Clean up database when application closes
+        /// </summary>
+        private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            try
+            {
+                if (File.Exists(_shoppingListPath))
+                {
+                    File.Delete(_shoppingListPath);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error cleaning up database: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// Recipe item class for binding
+        /// </summary>
         public class RecipeItem
         {
             public string Name { get; set; }
         }
 
+        /// <summary>
+        /// Handle navigation between different pages
+        /// </summary>
         private void NavigationList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (navigationList.SelectedItem == null) return;
 
-            // Hide all pages
             welcomePage.Visibility = Visibility.Collapsed;
             recipeManagementPage.Visibility = Visibility.Collapsed;
             customRecipePage.Visibility = Visibility.Collapsed;
@@ -111,11 +143,14 @@ namespace CookBook.RecipeManager.GUI.Windows
                     break;
                 case "shoppingListItem":
                     shoppingListPage.Visibility = Visibility.Visible;
-                    LoadShoppingListItems(); // 刷新购物清单显示
+                    LoadShoppingListItems();
                     break;
             }
         }
 
+        /// <summary>
+        /// Handle search button click in welcome page
+        /// </summary>
         private void WelcomeSearchButton_Click(object sender, RoutedEventArgs e)
         {
             string searchTerm = welcomeSearchBox.Text;
@@ -123,6 +158,9 @@ namespace CookBook.RecipeManager.GUI.Windows
             _searchPage.SearchRecipes(searchTerm);
         }
 
+        /// <summary>
+        /// Handle enter key press in welcome page search box
+        /// </summary>
         private void WelcomeSearchBox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
@@ -131,6 +169,9 @@ namespace CookBook.RecipeManager.GUI.Windows
             }
         }
 
+        /// <summary>
+        /// Get the shopping list page instance
+        /// </summary>
         public ShoppingListPage GetShoppingListPage()
         {
             return _shoppingPage;
